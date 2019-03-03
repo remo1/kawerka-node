@@ -1,0 +1,49 @@
+@import '../global/global.scss';
+
+.show-cart {
+    width: 100% !important;
+    height: auto !important;
+    grid-column: 3;
+    display: table;
+    margin-bottom: 36px;
+
+    &-whole {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        p {
+            font-size: 24px;
+            margin: 4px 0;
+            justify-self: center;
+            text-align: center;
+
+            span {
+                font-family: 'hanley';
+                font-size: 36px;
+            }
+        }
+    }
+
+    a {
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+    }
+}
+
+@include respond-below(md) {
+    .show-cart {
+        grid-column: 1;
+        margin-bottom:8px;
+        //   display:block;
+        a {
+            // position: fixed;
+            // bottom: 0px;
+            // width:100%;
+            // left:0;
+            // border-radius: 0;
+        }
+    }
+}

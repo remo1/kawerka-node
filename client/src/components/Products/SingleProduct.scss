@@ -1,0 +1,42 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+.single-product {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    // align-items: center;
+    img {
+        max-height: 700px;
+        max-width: 100%;
+        position: sticky;
+        top: 164px;
+    }
+
+    &-content {
+        width: 60%;
+    }
+
+}
+
+@include respond-below(sm) {
+    .single-product {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        // align-items: center;
+        img {
+            max-height: 700px;
+            max-width: 300px;
+        }
+
+        &-content {
+            width: 100%;
+        }
+
+    }
+}

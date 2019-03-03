@@ -1,0 +1,82 @@
+@import '../global/mixins.scss';
+
+.brew-guides {
+    margin: 20px 0;
+    height: 450px !important;
+    display: flex;
+
+    .slider-image {
+
+        img {
+            position: relative;
+            //top: -23px;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .header-text {
+        font-size: 89px;
+        line-height: 89px;
+    }
+
+    .copy {
+        p {
+            margin: 8px 40px;
+        }
+    }
+
+    .slider-content {
+        justify-content: space-around;
+    }
+
+}
+
+@include respond-between(xxs, xs) {
+    .brew-guides {
+        margin-top: 40px;
+        height: auto !important;
+        position: relative;
+
+        .slider-copy {
+            padding-top: 24px;
+        }
+
+        .slider-image {
+            position: absolute;
+            left: 8px;
+            bottom: 0px;
+            opacity: 0.6;
+            img {
+                height: 100%;
+                width: auto;
+                top: 0;
+            }
+        }
+    }
+
+    // .biuro {
+    //     margin-top: 40px;
+    //     height: auto !important;
+    //     position: relative;
+
+    //     .slider-copy {
+    //         padding-top: 24px;
+    //     }
+
+    //     .slider-image {
+    //         position: absolute;
+    //         left: 8px;
+    //         bottom: 0px;
+    //         opacity: 0.6;
+
+    //         img {
+    //             height: 100%;
+    //             width: auto;
+    //             top: 0;
+    //         }
+    //     }
+    // }
+
+
+}

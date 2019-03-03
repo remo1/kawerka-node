@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'core-body';
+    src: url('./assets/fonts/core-copy.eot');
+    src: url('./assets/fonts/core-copy.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/core-copy.woff2') format('woff2'),
+        url('./assets/fonts/core-copy.woff') format('woff'),
+        url('./assets/fonts/core-copy.svg#core-copy') format('svg');
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0009-FB04;
+}
+
+@font-face {
+    font-family: 'core-header';
+    src: url('./assets/fonts/core-header.eot');
+    src: url('./assets/fonts/core-header.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/core-header.woff2') format('woff2'),
+        url('./assets/fonts/core-header.woff') format('woff'),
+        url('./assets/fonts/core-header.svg#core-header') format('svg');
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0009-FB04;
+}
+
+@font-face {
+    font-family: 'core-cta';
+    src: url('./assets/fonts/core-cta.eot');
+    src: url('./assets/fonts/core-cta.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/core-cta.woff2') format('woff2'),
+        url('./assets/fonts/core-cta.woff') format('woff'),
+        url('./assets/fonts/core-cta.svg#core-cta') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0009-FB04;
+}
+
+@font-face {
+    font-family: 'hanley';
+    src: url('./assets/fonts/HanleyPro-Block.woff2') format('woff2'),
+        url('./assets/fonts/HanleyPro-Block.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+.body {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Hanley Pro Block';
+    src: url('HanleyPro-Block.woff2') format('woff2'),
+        url('HanleyPro-Block.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

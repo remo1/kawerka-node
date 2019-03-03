@@ -1,0 +1,19 @@
+.oferta-biurowa {
+    &-header {
+        font-size: 36px;
+        text-transform: lowercase;
+        font-family: 'hanley';
+        text-align: center;
+        height: auto;
+    }
+
+    a {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .info-siepomaga {
+        text-align: center;
+
+    }
+}

@@ -1,0 +1,257 @@
+@import '../global/global.scss';
+
+.checkout-form {
+    grid-column: 1;
+
+    button {
+        margin-top: 4px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    button:disabled,
+    button[disabled] {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .reg {
+        a {
+            color: $highlight;
+            font-family: 'core-header';
+        }
+
+
+    }
+
+    .border-content {
+        padding: 0;
+    }
+
+    .border-title {
+        padding: 24px 0;
+        position: relative;
+        z-index: 999999;
+        justify-content: center;
+        align-items: center;
+
+        input[type=checkbox] {
+            //margin-right: 18px;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    .onCheckbox {
+        display: none;
+    }
+
+    fieldset {
+        // margin: 0;
+        // padding: 0;
+        border: 0;
+        height: auto;
+        padding: 0;
+        margin-top: 32px;
+
+        h2 {
+            margin-top: 4px;
+            padding: 4px;
+            text-align: center;
+            font-family: 'hanley';
+            font-weight: normal;
+            margin-bottom: 0;
+            position: relative;
+            left: -24px;
+            color: $text;
+        }
+    }
+
+    .delivery {
+        position: relative;
+    }
+
+    .completed {
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .input-wrap {
+        div {
+            span {
+                position: relative;
+                top: -5px;
+                color: $highlight;
+                font-size: 12px;
+                left: 8px;
+
+            }
+        }
+    }
+
+    input,
+    select {
+        box-sizing: border-box;
+        height: 42px;
+        display: block;
+        width: 100%;
+        height: 32px;
+        font-size: 18px;
+        border: 2px solid $text;
+        background-color: none !important;
+        padding: 24px 8px;
+        margin-bottom: 8px;
+        border: 0;
+        border-bottom: 2px solid $text;
+    }
+
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 0 !important;
+        padding: 0 8px;
+        border: 2px solid $text;
+        margin-top: 4px;
+        display: block;
+        text-transform: uppercase;
+        background: url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg) no-repeat right;
+        background-color: white;
+        height: 54px;
+        margin-bottom: 18px;
+
+    }
+
+    .disabled {
+        opacity: 0.7;
+
+        input {
+            pointer-events: none;
+        }
+    }
+
+    .collapsed {
+        height: 107px !important;
+        //   opacity: 0.7;
+
+        .border-content {
+            height: 100%;
+        }
+
+        .border-title {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            display: flex;
+        }
+
+        .form-content {
+            display: none !important;
+        }
+
+        .border-line-h-1,
+        .border-line-h-2 {
+            display: none;
+        }
+    }
+
+    .billing {
+        .border-title {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.form {
+    &-content {
+        padding: 18px 16px;
+        display: block;
+        // border-left: 2px solid #333;
+        position: relative;
+        // top: -7px;
+
+
+
+
+    }
+
+
+
+    &-error {
+        border-color: $highlight !important;
+    }
+
+    &-fields {
+        width: 100%;
+    }
+
+    &-header {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+
+        span {
+            height: 48px;
+            width: 48px;
+            background-color: $text;
+            border-radius: 100%;
+            color: white;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: 'core-cta';
+            position: relative;
+            left: -26px;
+            top: -1px;
+        }
+
+    }
+}
+
+.submit {
+    // position: absolute;
+    width: auto;
+    cursor: pointer;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide-content {
+    display: none;
+}
+
+
+
+.verified {
+    height: auto;
+    color: green;
+    border-color: green !important;
+    opacity: 1 !important;
+    cursor: pointer;
+
+    .form-header {
+        h2 {
+            color: green;
+        }
+
+        span {
+            background-color: green;
+        }
+    }
+}
+
+
+
+@include respond-below(md) {
+    .checkout-form {}
+}

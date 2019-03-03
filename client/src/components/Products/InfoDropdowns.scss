@@ -1,0 +1,48 @@
+@import '../global/vars.scss';
+
+.dropdowns {
+    margin: 34px 0;
+    height:auto;
+    .ziarna{
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+            padding-bottom:8px;
+            li{
+                border-left:8px solid $button-hover;
+                padding-left:8px;
+                span{
+                    font-family: 'core-header';
+                }
+            }
+        }
+    }
+    .circle {}
+
+    &-open {}
+
+    &-text {
+        display: flex;
+        justify-content: space-between;
+        height:auto;
+        line-height: 36px;
+        padding: 8px 24px;
+        cursor: pointer;
+        span {
+            font-family: 'core-header';
+            font-size: 24px;
+            text-transform: uppercase;
+            pointer-events:none;
+            
+        }
+    }
+    &-hide{
+        display:none;
+    }
+
+    .dropdown {
+        padding: 8px 24px;
+
+    }
+}

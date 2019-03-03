@@ -1,0 +1,256 @@
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+.brew {
+    padding: 0 8px;
+    &-header {
+        font-size: 36px;
+        text-transform: lowercase;
+        font-family: 'hanley';
+        text-align: center;
+    }
+
+    &-methods {
+        display: flex;
+        flex-direction: row;
+        margin: 32px 0;
+
+        &-item {
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid $text;
+            position: relative;
+            text-decoration: none;
+
+            &:last-child {
+                border: none;
+
+                &::after {
+                    content: none;
+                }
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            &:hover {
+                span {
+                    color: $highlight;
+                }
+
+                img {
+                    transform: rotate(-10deg)
+                }
+            }
+
+            &::before {
+                content: url('../../assets/img/arrow.svg');
+                position: absolute;
+                top: 0;
+                right: -19px;
+                // transform: scale(-1, 1);
+                transform: rotate(90deg)
+            }
+
+            &::after {
+                content: url('../../assets/img/arrow.svg');
+                position: absolute;
+                bottom: 0;
+                right: -17px;
+                // transform: scale(-1, 1);
+                transform: rotate(-90deg)
+            }
+
+            img {
+                width: 70%;
+                justify-self: center;
+                align-self: center;
+                max-height: 280px;
+                transition: $trans;
+            }
+
+            span {
+                font-family: 'core-header';
+                text-decoration: none;
+                color: $text;
+                //     text-transform: lowercase;
+                font-size: 18px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    &-basic {
+        ul {
+            list-style: none;
+
+        }
+
+        li {
+            position: relative;
+            padding: 16px 0;
+
+            &:first-child {
+                padding-top: 0;
+
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    background-color: $button-hover;
+                    position: absolute;
+                    left: -25px;
+                    top: 4px;
+                }
+            }
+
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: $button-hover;
+                position: absolute;
+                left: -25px;
+                top: 21px;
+            }
+        }
+    }
+
+    &-item {
+        border-top: 8px solid $button-hover;
+        margin: 32px 0;
+        padding: 32px 0;
+        display: flex;
+        flex-direction: row;
+
+        &-left {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                max-height: 200px;
+                align-self: center;
+                justify-self: center;
+            }
+
+            &-recipe {
+                ul {
+                    list-style: none;
+                    margin-top: 32px;
+
+                    li {
+                        margin: 8px 0;
+                    }
+
+                    span {
+                        font-family: 'core-cta';
+                        text-transform: uppercase;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin: 8px 0;
+
+                    a {
+                        color: $highlight;
+                        font-size: 18px;
+                        text-decoration: none;
+                        font-family: 'core-header';
+                    }
+                }
+
+                span {
+                    font-family: 'core-cta';
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &-right {
+            width: 69%;
+            display: flex;
+            flex-direction: column;
+
+            &-header {
+                font-size: 42px;
+                font-family: 'hanley';
+                text-transform: lowercase;
+                text-align: center;
+                padding: 8px 0;
+                span{
+                    font-size: 14px;
+                    font-family: 'core-body';
+                    display: block;
+                }
+            }
+
+            ul {
+                list-style: none;
+                counter-reset: li;
+
+                li {
+                    counter-increment: li;
+                    padding: 16px 0;
+                    position: relative;
+
+                    &:nth-child(2) {
+                        padding-top: 32px;
+                    }
+
+                    &::before {
+                        content: counter(li);
+                        color: $button-hover;
+                        display: inline-block;
+                        font-family: 'core-cta';
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        left: -25px;
+                    }
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-family: 'core-cta';
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+
+}
+
+@include respond-between(xxs, xs) {
+  .brew-item{
+      flex-direction: column;
+      align-content: center;
+      &-left{
+          width:100%;
+      }
+      &-right{
+          width:100%;
+      }
+  }
+  .brew-methods-item span{
+      font-size:14px;
+  }
+  .brew-item-right-header, .brew-header, .brew-item-right-header{
+      font-size:32px;
+      line-height: 32px;
+  }
+}

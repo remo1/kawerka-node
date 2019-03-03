@@ -1,0 +1,43 @@
+@import '../global/vars.scss';
+
+.button {
+    text-transform: uppercase;
+    border-radius: $b-radius;
+    border: 2px solid $highlight;
+    padding: 14px 18px;
+    color: $highlight;
+    text-decoration: none;
+    z-index: 999;
+    font-family: 'core-cta';
+    transition: .1s;
+
+    &:hover {
+        background-color: $button-hover;
+        color: white;
+    }
+
+    &-normal {
+        padding:0;
+        border: 2px solid transparent;
+        text-transform: none;
+        border-radius: 0;
+
+        &:hover {
+            border-bottom: 2px solid $highlight;
+            background-color: transparent;
+            color: $highlight;
+        }
+    }
+
+    &-red {
+        background-color: $highlight;
+        color: white;
+
+        &:hover {
+            background-color: $button-hover;
+            color: $highlight;
+            border: 2px solid $button-hover;
+        }
+    }
+
+}

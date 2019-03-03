@@ -1,0 +1,110 @@
+@import '../global/global.scss';
+
+.cart {
+    width: auto!important;
+    height: auto !important;
+    grid-column: 1;
+    display: table;
+    margin-bottom:36px;
+    .slider-content{
+        min-width:476px;
+        min-height:140px;
+        flex-direction: column;
+    }
+    .empty{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    &-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+
+        .product-image {
+            padding-right: 8px;
+            img {
+                position: relative;
+                transform: none;
+                top: 0;
+                left: 0;
+                height:auto;
+                max-width: 120px;
+            }
+        }
+    }
+
+    &-title{
+        color:$highlight;
+        font-family: 'core-header';
+        .arrow{
+            top:-12px;
+        }
+    }
+    &-details{
+        width:300px;
+    }
+    &-price{
+        p{
+            margin:6px 0;
+            font-size:14px;
+            text-transform: capitalize;
+            span{
+                font-family: 'core-header';
+                font-size:16px;
+            }
+        }
+    }
+    &-quantity {
+        width: 100%;
+        position: relative;
+        .quantity {
+            pointer-events: none;
+        }
+        button {
+            border: 0;
+            width: 46px;
+            height: 46px;
+            position: absolute;
+            background-color: $text;
+            color: white;
+            font-size: 24px;
+            z-index: 9;
+            cursor: pointer;
+        }
+
+        .decrement {
+            left: 0;
+            bottom: 0;
+        }
+
+        .increment {
+            right: 0;
+            bottom: 0;
+        }
+
+        input {
+            margin: 0;
+            padding: 0;
+            height: 46px;
+            width: 100%;
+            text-align: center;
+            border: 0;
+            font-size: 24px;
+
+        }
+    }
+
+    .slider-content {}
+}
+
+@include respond-below(md) {
+    .cart {
+        grid-column: 1;
+        display:block;
+    }
+}

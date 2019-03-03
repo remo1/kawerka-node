@@ -1,0 +1,201 @@
+@import "~slick-carousel/slick/slick.css";
+@import '../global/vars.scss';
+@import '../global/mixins.scss';
+
+
+.slick-track {
+    height: 650px;
+}
+
+.slick-list {
+    overflow: unset;
+    height: auto !important;
+}
+
+.slider-home {
+    margin-top: 50px;
+}
+
+.slider {
+    &-copy {
+        position: relative;
+        width: 60%;
+        height: auto;
+        padding-right: 24px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .inner {
+            //  
+            position: relative;
+        }
+    }
+
+    &-image {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        height: 100%;
+
+        img {
+            pointer-events: none;
+            width: 100%;
+        }
+    }
+
+    &-content {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        height: 100%;
+
+
+        // .header-text {
+        //     font-size: 128px;
+        //     font-family: 'hanley';
+        //     width: 100%;
+        //     color: $text;
+        //     text-align: center;
+        //     line-height: 128px;
+
+        //     span {
+
+        //         text-align: right;
+        //     }
+        // }
+
+        .copy {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                text-align: center;
+                padding: 0 24px;
+            }
+
+            .button {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@include respond-above(lg) {
+    .header-text {
+        font-size: 164px;
+        font-family: 'hanley';
+        width: 100%;
+        color: $text;
+        text-align: center;
+        line-height: 128px;
+
+        span {
+
+            text-align: right;
+        }
+    }
+}
+
+@include respond-between(md, lg) {
+    .header-text {
+        font-size: 128px;
+        font-family: 'hanley';
+        width: 100%;
+        color: $text;
+        text-align: center;
+        line-height: 128px;
+
+        span {
+            text-align: right;
+        }
+    }
+}
+
+@include respond-between(xs, md) {
+    .border {
+        height: auto !important;
+    }
+
+    .slick-track {
+        height: auto;
+    }
+
+    .slider {
+        height: auto;
+
+        &-home {
+            margin: 0;
+        }
+
+        &-content {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            height: 100%;
+
+            .header-text {
+                font-size: 64px;
+                font-family: 'hanley';
+                width: 100%;
+                color: $text;
+                text-align: center;
+                line-height: 64px;
+            }
+        }
+
+        &-image {
+            max-width: 320px;
+        }
+
+    }
+}
+
+@include respond-between(xxs, xs) {
+    .border {
+        height: auto !important;
+    }
+
+    .slick-track {
+        height: auto;
+    }
+
+    .slider {
+        height: auto;
+
+        &-home {
+            margin: 0;
+        }
+
+        &-copy {
+            position: relative;
+            width: 90%;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        &-content {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            height: 100%;
+
+            .header-text {
+                font-size: 38px;
+                font-family: 'hanley';
+                width: 100%;
+                color: $text;
+                text-align: center;
+                line-height: 38px;
+            }
+        }
+
+        &-image {
+            max-width: 210px;
+
+        }
+
+    }
+}
