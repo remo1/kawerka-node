@@ -12,6 +12,7 @@
     &-wrap {
         width: 25%;
         position: relative;
+
         &:first-child {
             .step-circle {
                 &:before {
@@ -50,7 +51,7 @@
     }
 
     .active {
-        &-back{
+        &-back {
             .step-circle {
                 background-color: $highlight !important;
                 color: white;
@@ -60,7 +61,8 @@
                 // }
             }
         }
-        &-without{
+
+        &-without {
             .step-circle {
                 background-color: $highlight !important;
                 color: white;
@@ -69,15 +71,17 @@
                 //     background-color: $highlight;
                 // }
             }
-    
+
             .step-info {
                 font-family: 'core-cta';
             }
         }
+
         .step-circle {
             background-color: $highlight !important;
             color: white;
             font-family: 'core-cta';
+
             &:before {
                 background-color: $highlight;
             }

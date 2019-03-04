@@ -10,7 +10,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: hidden!important;
   background-color:$bg-master;
   
+}
+html{
+  overflow-x: hidden!important;
 }
