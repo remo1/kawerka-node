@@ -1,4 +1,5 @@
 @import '../global/vars.scss';
+@import '../global/mixins.scss';
 
 .dropdowns {
     margin: 34px 0;
@@ -18,9 +19,6 @@
             }
         }
     }
-    .circle {}
-
-    &-open {}
 
     &-text {
         display: flex;
@@ -44,5 +42,29 @@
     .dropdown {
         padding: 8px 24px;
 
+    }
+}
+
+@include respond-below(sm) {
+    .dropdowns {
+        margin: 34px 0;
+        height:auto;
+        &-text {
+            span {
+                font-family: 'core-header';
+                font-size:16px;
+                text-transform: uppercase;
+                pointer-events:none;
+                
+            }
+        }
+        &-hide{
+            display:none;
+        }
+    
+        .dropdown {
+            padding: 8px 24px;
+    
+        }
     }
 }

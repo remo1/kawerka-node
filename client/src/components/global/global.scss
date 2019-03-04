@@ -92,7 +92,8 @@ html {
         padding: 24px;
         display: flex;
         flex-direction: column;
-
+        position: relative;
+        z-index: 9999;
         .border-title {
             text-align: center;
             width: 100%;

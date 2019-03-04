@@ -132,29 +132,32 @@ class CheckoutForm extends Component {
 
     CheckoutTemplate.shipping_address.first_name = values.shipping_firstname;
     CheckoutTemplate.shipping_address.last_name = values.shipping_lastname;
-    CheckoutTemplate.shipping_address.phone_number = values.shipping_phone_number;
+    CheckoutTemplate.shipping_address.phone_number =
+      values.shipping_phone_number;
     CheckoutTemplate.shipping_address.line_1 = values.shipping_address_1;
-    CheckoutTemplate.shipping_address.line_2 = grind.join(" ");;
+    CheckoutTemplate.shipping_address.line_2 = grind.join(" ");
     CheckoutTemplate.shipping_address.city = values.shipping_city;
     CheckoutTemplate.shipping_address.postcode = values.shipping_postcode;
     CheckoutTemplate.shipping_address.country = values.shipping_country;
-    CheckoutTemplate.shipping_address.county = values.shipping_county || ' ';
+    CheckoutTemplate.shipping_address.county = values.shipping_county || " ";
 
     if (this.props.formsInfo.values.fvat === true) {
-      CheckoutTemplate.shipping_address.company_name = values.billing_company + ' ' + values.billing_nip;
+      CheckoutTemplate.shipping_address.company_name =
+        values.billing_company + " " + values.billing_nip;
       CheckoutTemplate.billing_address.first_name = values.billing_firstname;
       CheckoutTemplate.billing_address.last_name = values.billing_lastname;
-      CheckoutTemplate.billing_address.phone_number = values.billing_phone_number;
+      CheckoutTemplate.billing_address.phone_number =
+        values.billing_phone_number;
       CheckoutTemplate.billing_address.line_1 = values.billing_address_1;
       CheckoutTemplate.billing_address.line_2 = values.billing_address_2;
       CheckoutTemplate.billing_address.postcode = values.billing_postcode;
       CheckoutTemplate.billing_address.country = values.billing_country;
-      CheckoutTemplate.billing_address.county = values.shipping_county || ' ';
+      CheckoutTemplate.billing_address.county = values.shipping_county || " ";
 
       CheckoutTemplate.billing_address.city = values.billing_city;
       CheckoutTemplate.billing_address.company_name = values.billing_company;
       CheckoutTemplate.billing_address.telephone = values.billing_company;
-    }else{
+    } else {
       CheckoutTemplate.billing_address = CheckoutTemplate.shipping_address;
     }
 

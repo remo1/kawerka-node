@@ -1,4 +1,5 @@
 @import '../../global/vars.scss';
+@import '../../global/mixins.scss';
 
 .single-product-description {
     height: auto !important;
@@ -9,6 +10,7 @@
 
     .border-content {
         margin: 0 8px;
+
         .arrow {
             width: 110%;
             margin-left: -5%;
@@ -26,20 +28,51 @@
     &-taste {
         display: flex;
         justify-content: center;
+
         &-taste {
             font-size: 14px;
             text-align: center;
             text-transform: uppercase;
             font-family: 'core-header';
-            display: inline-block; 
+            display: inline-block;
             padding: 14px 8px;
-         //   margin: 0 32px;
+            //   margin: 0 32px;
             color: $highlight;
             border-left: 1px solid $text;
             border-right: 1px solid $text;
             border-bottom: 1px solid $text;
 
         }
+    }
+}
 
+@include respond-below(sm) {
+
+    .single-product-description {
+        &-name {
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &-taste {
+            display: flex;
+            justify-content: center;
+
+        
+            &-taste {
+                font-size: 12px;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'core-header';
+                display: inline-block;
+                padding: 14px 8px;
+                margin: 0 24px;
+                //   margin: 0 32px;
+                color: $highlight;
+                border-left: 1px solid $text;
+                border-right: 1px solid $text;
+                border-bottom: 1px solid $text;
+
+            }
+        }
     }
 }

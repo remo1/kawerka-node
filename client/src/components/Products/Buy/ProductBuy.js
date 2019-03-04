@@ -26,7 +26,7 @@ const ProductBuy = props => {
       <div className="border-content">
       <div className="border-copy">
         <form>
-          <div className="single-product-buy-type">
+          <div className="single-product-buy-type"> 
             <label htmlFor="type">rodzaj zmielenia:</label>
             <select id="type">
               <option value="cale">całe ziarna</option>

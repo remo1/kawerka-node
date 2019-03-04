@@ -1,24 +1,25 @@
 @import '../../global/vars.scss';
+@import '../../global/mixins.scss';
 
 .add-to-cart {
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
+
     button {
         margin-top: 8px;
-        width: 80%;
-        height: 56px;
         background-color: $highlight;
         color: white;
         font-size: 24px;
-        font-family: 'hanley';
         cursor: pointer;
         align-self: center;
-        line-height: 36px;
+        line-height: 24px;
+        width:80%;
     }
-    .arrow{
-        margin-top:8px;
+
+    .arrow {
+        margin-top: 8px;
     }
 
     span {
@@ -28,5 +29,27 @@
         text-align: center;
         font-size: 12px;
         text-transform: uppercase;
+    }
+}
+
+@include respond-below(sm) {
+    .add-to-cart {
+        button {
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+        .arrow {
+            margin-top: 8px;
+        }
+
+        span {
+            padding-top: 4px;
+            align-self: center;
+            width: 80%;
+            text-align: center;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
     }
 }

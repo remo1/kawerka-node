@@ -38,15 +38,24 @@
         height: auto !important;
         position: relative;
 
+        .header-text {
+            font-size: 48px;
+            line-height: 48px;
+        }
         .slider-copy {
             padding-top: 24px;
+            p{
+                margin: 8px;
+                padding:0;
+            }
         }
 
         .slider-image {
             position: absolute;
-            left: 8px;
+            left: 14px;
             bottom: 0px;
-            opacity: 0.6;
+            opacity: 0.4;
+            margin:0;
             img {
                 height: 100%;
                 width: auto;
@@ -54,29 +63,5 @@
             }
         }
     }
-
-    // .biuro {
-    //     margin-top: 40px;
-    //     height: auto !important;
-    //     position: relative;
-
-    //     .slider-copy {
-    //         padding-top: 24px;
-    //     }
-
-    //     .slider-image {
-    //         position: absolute;
-    //         left: 8px;
-    //         bottom: 0px;
-    //         opacity: 0.6;
-
-    //         img {
-    //             height: 100%;
-    //             width: auto;
-    //             top: 0;
-    //         }
-    //     }
-    // }
-
 
 }
