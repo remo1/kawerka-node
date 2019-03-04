@@ -1,6 +1,6 @@
 {
-  "main.js": "static/js/main.7885ca43.js",
-  "main.js.map": "static/js/main.7885ca43.js.map",
+  "main.js": "static/js/main.ffb25d8d.js",
+  "main.js.map": "static/js/main.ffb25d8d.js.map",
   "static/media/BrewGH.png": "static/media/BrewGH.3625c241.png",
   "static/media/HanleyPro-Block.woff": "static/media/HanleyPro-Block.12273d12.woff",
   "static/media/HanleyPro-Block.woff2": "static/media/HanleyPro-Block.c229cd31.woff2",
@@ -31,5 +31,6 @@
   "static/media/kawa.png": "static/media/kawa.bcc3bfdd.png",
   "static/media/logo.svg": "static/media/logo.e9f5e26c.svg",
   "static/media/moka.png": "static/media/moka.67c7d824.png",
-  "static/media/user.svg": "static/media/user.72ecc597.svg"
+  "static/media/user.svg": "static/media/user.72ecc597.svg",
+  "static/media/zl.png": "static/media/zl.27f53225.png"
 }

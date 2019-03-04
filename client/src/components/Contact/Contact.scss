@@ -1,3 +1,5 @@
+@import '../global/mixins.scss';
+
 .contact {
     &-p {
         margin-bottom: 34px;
@@ -25,6 +27,44 @@
                 display: block;
             }
         }
+    }
+
+}
+
+@include respond-below(sm) {
+
+    .contact {
+        &-p {
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                li{
+                    margin: 4px 0;
+                }
+            }
+
+        }
+
+        &-s {
+            ul {
+                list-style: none;
+                padding: 0;
+                display: block;
+
+                li {
+                    display: inline-block;
+                    margin: 0 8px;
+
+                    a {
+                        // margin: 4px 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
     }
 
 }

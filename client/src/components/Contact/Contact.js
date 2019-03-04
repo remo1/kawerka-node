@@ -65,7 +65,7 @@ class Contact extends Component {
                         </li>
                       </ul>
                     </div>
-                    <div className="contact-p">
+                    <div className="contact-p contact-s">
                       Sprawdź nasze social media!
                       <ul>
                         <li>
