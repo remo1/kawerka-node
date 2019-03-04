@@ -62,7 +62,7 @@ html {
         grid-template-columns: auto;
         grid-template-rows: minmax(320px, max-content);
         padding: 0 8px;
-        margin-bottom:32px;
+        margin-bottom: 32px;
 
     }
 
@@ -74,9 +74,10 @@ html {
         grid-template-columns: auto;
         grid-template-rows: minmax(320px, max-content);
         padding: 0 8px;
-      //  justify-content: center;
-        .step{
-            width:100%;
+
+        //  justify-content: center;
+        .step {
+            width: 100%;
         }
 
     }
@@ -94,6 +95,7 @@ html {
         flex-direction: column;
         position: relative;
         z-index: 9999;
+
         .border-title {
             text-align: center;
             width: 100%;
@@ -333,4 +335,32 @@ html {
     .container {
         grid-template-rows: auto auto auto;
     }
+
+
+}
+
+@include respond-below(xs) {
+    .arrow {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: $text;
+
+        &:after {
+            content: url('../../assets/img/arrow.svg');
+            position: absolute;
+            top: -10px;
+            left: 0;
+        }
+
+        &:before {
+            content: url('../../assets/img/arrow.svg');
+            position: absolute;
+            top: -10px;
+            right: 0;
+            transform: scale(-1, 1);
+
+        }
+    }
+
 }
