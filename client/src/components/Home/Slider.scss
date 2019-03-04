@@ -99,7 +99,6 @@
 }
 
 @include respond-between(md, lg) {
-
     .header-text {
         font-size: 128px;
         font-family: 'hanley';
@@ -149,7 +148,7 @@
         &-image {
             max-width: 320px;
             img{
-                max-height: 420px;
+                max-height: 225px;
             }
         }
 
@@ -201,7 +200,7 @@
             max-width: 120px;
             margin: 24px 0;
             img{
-                max-height: 300px;
+                max-height: 225px;
                 max-width: 300px;
             }
 

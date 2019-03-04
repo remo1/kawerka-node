@@ -36,6 +36,7 @@ const ProductBuy = props => {
           <div className="single-product-buy-quantity">
             <div className="quantity-input">
               <label>Waga:</label>
+              <div className="quantity-input-buttons">
               <button
                 disabled={props.product.quantity === 1 ? true : false}
                 type="button"
@@ -67,6 +68,8 @@ const ProductBuy = props => {
               >
                 <span aria-hidden="true">+</span>
               </button>
+              </div>
+
             </div>
           </div>
         </form>

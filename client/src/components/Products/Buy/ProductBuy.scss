@@ -76,21 +76,30 @@
         width: 100%;
         position: relative;
         margin-top: 8px;
-
+    
         .quantity {
             pointer-events: none;
+            &-input{
+                &-buttons{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+            }
+            }
         }
         
         button {
             border: 0;
-            width: 46px;
-            height: 46px;
-            position: absolute;
-            background-color: $text;
+            // position: absolute;
+             background-color: $text;
             color: white;
             font-size: 24px;
             z-index: 9;
             cursor: pointer;
+            span{
+                padding: 24px;
+            }
         }
 
         .decrement {
