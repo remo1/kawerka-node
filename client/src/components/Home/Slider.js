@@ -16,7 +16,8 @@ export default class SliderS extends Component {
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false
+      arrows: false,
+      fade: true
     };
     return (
       <div className="slider-home">
