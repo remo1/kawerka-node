@@ -3,7 +3,12 @@
 
 .brew {
     padding: 0 8px;
-
+    &-hide{
+        display:block;
+    }
+    &-show{
+        display:none;
+    }
     &-header {
         font-size: 36px;
         text-transform: lowercase;
@@ -15,7 +20,13 @@
         display: flex;
         flex-direction: row;
         margin: 32px 0;
+        span {
+            pointer-events: none;
+        }
 
+        img {
+            pointer-events: none;
+        }
         &-item {
             width: 25%;
             display: flex;
@@ -66,6 +77,7 @@
                 // transform: scale(-1, 1);
                 transform: rotate(-90deg)
             }
+          
 
             img {
                 width: 70%;
@@ -162,6 +174,7 @@
 
             ul {
                 list-style: none;
+                padding:0;
 
                 li {
                     margin: 8px 0;
@@ -239,9 +252,17 @@
 }
 
 @include respond-between(xxs, xs) {
+    .brew{
+        &-hide{
+            display:none;
+        }
+        &-show{
+            display:block;
+        }
+    }
     .brew-methods {
         flex-wrap: wrap;
-
+     
         &-item {
             width: 50%;
             margin: 12px 0;

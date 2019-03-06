@@ -14,8 +14,7 @@ class Product extends Component {
   componentDidMount() {
     const { fetched } = this.props;
     if (!fetched) {
-      this.props.GetProducts()
-      .then(item => {
+      this.props.GetProducts().then(item => {
         let sItem = this.props.products.data.find(
           selected => selected.id === this.props.match.params.id
         );
@@ -37,11 +36,11 @@ class Product extends Component {
         </div>
       );
     } else {
-      return(
-      <div>
-      <Loading /> 
-    </div>
-    )
+      return (
+        <div>
+          <Loading />
+        </div>
+      );
     }
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import smoothscroll from "smoothscroll-polyfill";
 
 import Menu from "../global/Menu";
 import Loading from "../global/Loading";
@@ -23,7 +22,6 @@ require("./BrewGuides.scss");
 class BrewGuides extends Component {
   componentDidMount() {
     const { products, categories, collections } = this.props;
-    smoothscroll.polyfill();
 
     if (!products.fetched) {
       this.props.GetProducts();
@@ -33,7 +31,7 @@ class BrewGuides extends Component {
     e.preventDefault();
     document
       .querySelector(e.target.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth", alignToTop: false });
   }
 
   render() {
@@ -41,6 +39,7 @@ class BrewGuides extends Component {
       console.log(e.target.nextSibling);
       e.target.nextSibling.classList.toggle("dropdowns-hide");
     };
+
     if (this.props.products !== null) {
       return (
         <div className="container">
@@ -116,11 +115,14 @@ class BrewGuides extends Component {
                   </li>
                 </ul>
               </div>
-              <div id="french" className="brew-item">
-                <div className="brew-item-left">
+              <div className="brew-item">
+                <div id="french" className="brew-item-left">
                   <img src={french} />
                   <div className="brew-item-left-recipe">
                     <ul>
+                      <li className="brew-show">
+                        <span>French Press Brew Guide</span> 500ml{" "}
+                      </li>
                       <li>
                         <span>Ilość:</span> 2 kubki
                       </li>
@@ -137,7 +139,7 @@ class BrewGuides extends Component {
                     <div className="arrow" />
                   </div>
                   <ul>
-                    <span> Wymaga przedmioty:</span>
+                    <span> Wymagane przedmioty:</span>
                     <li>French Press</li>
                     <li>
                       <a href="/sklep"> 26g świeżo palonej Kawerki </a>
@@ -149,7 +151,7 @@ class BrewGuides extends Component {
                   </ul>
                 </div>
                 <div className="brew-item-right">
-                  <div className="brew-item-right-header">
+                  <div className="brew-item-right-header brew-hide">
                     French Press Brew Guide
                     <span> 500ml</span>
                   </div>
@@ -196,11 +198,15 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div id="moka" className="brew-item">
-                <div className="brew-item-left">
+              <div className="brew-item">
+                <div id="moka" className="brew-item-left">
                   <img src={moka} />
                   <div className="brew-item-left-recipe">
                     <ul>
+                      <li className="brew-show">
+                        <span>Kawiarka (Moka Pot) Brew Guide</span>{" "}
+                      </li>
+
                       <li>
                         <span>Ilość:</span> 4 filiżanki
                       </li>
@@ -217,7 +223,7 @@ class BrewGuides extends Component {
                     <div className="arrow" />
                   </div>
                   <ul>
-                    <span> Wymaga przedmioty:</span>
+                    <span> Wymagane przedmioty:</span>
                     <li>Kawiarka (Moka Pot)</li>
                     <li>
                       <a href="/sklep"> 15g świeżo palonej Kawerki </a>
@@ -229,7 +235,7 @@ class BrewGuides extends Component {
                   </ul>
                 </div>
                 <div className="brew-item-right">
-                  <div className="brew-item-right-header">
+                  <div className="brew-item-right-header brew-hide">
                     Kawiarka (Moka Pot) Brew Guide
                   </div>
                   <div className="arrow" />
@@ -287,11 +293,15 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div id="aero" className="brew-item">
-                <div className="brew-item-left">
+              <div className="brew-item">
+                <div id="aero" className="brew-item-left">
                   <img src={aero} />
                   <div className="brew-item-left-recipe">
                     <ul>
+                      <li className="brew-show">
+                        <span>Aeropress Brew Guide</span>{" "}
+                      </li>
+
                       <li>
                         <span>Ilość:</span> 1 kubek
                       </li>
@@ -308,7 +318,7 @@ class BrewGuides extends Component {
                     <div className="arrow" />
                   </div>
                   <ul>
-                    <span> Wymaga przedmioty:</span>
+                    <span> Wymagane przedmioty:</span>
                     <li>Aeropress</li>
                     <li>Papierowy Filtr</li>
                     <li>
@@ -322,7 +332,7 @@ class BrewGuides extends Component {
                   </ul>
                 </div>
                 <div className="brew-item-right">
-                  <div className="brew-item-right-header">
+                  <div className="brew-item-right-header brew-hide">
                     Aeropress Brew Guide
                   </div>
                   <div className="arrow" />
@@ -375,11 +385,15 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div id="chemex" className="brew-item">
-                <div className="brew-item-left">
+              <div className="brew-item">
+                <div id="chemex" className="brew-item-left">
                   <img src={chemex} />
                   <div className="brew-item-left-recipe">
                     <ul>
+                      <li className="brew-show">
+                        <span>Chemex Brew Guide</span>{" "}
+                      </li>
+
                       <li>
                         <span>Ilość:</span> 4 - 6 filiżanek
                       </li>
@@ -396,7 +410,7 @@ class BrewGuides extends Component {
                     <div className="arrow" />
                   </div>
                   <ul>
-                    <span> Wymaga przedmioty:</span>
+                    <span> Wymagane przedmioty:</span>
                     <li>Chemex (6 filiżanek)</li>
                     <li>Papierowy Filtr</li>
                     <li>
@@ -408,7 +422,7 @@ class BrewGuides extends Component {
                   </ul>
                 </div>
                 <div className="brew-item-right">
-                  <div className="brew-item-right-header">
+                  <div className="brew-item-right-header brew-hide">
                     Chemex Brew Guide{" "}
                   </div>
                   <div className="arrow" />

@@ -10,78 +10,99 @@
     height: 65px;
     justify-content: space-between;
     padding: 0 24px;
+    align-items: center;
 
-    &-company {
-        align-self: center;
-
-    }
-
-    ul {
-        margin: 0;
-        list-style: none;
-        align-self: center;
+    &-links {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
 
-        li {
-            margin: 0 8px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            justify-self: flex-end;
 
-            .link {
-                color: white;
-                text-decoration: none;
-                border-radius: $b-radius;
-                display: inline-block;
-                padding: 8px 12px;
+            li {
+                margin: 0 8px;
 
-                &:hover {
-                    background-color: white;
-                    color: $highlight;
+                .link {
+                    color: white;
+                    text-decoration: none;
+                    border-radius: $b-radius;
+                    display: inline-block;
+                    padding: 8px 12px;
+
+                    &:hover {
+                        background-color: white;
+                        color: $highlight;
+                    }
+                }
+
+                .icon {
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+
+                }
+
+                img {
+                    height: 24px;
+                    padding: 0 12px;
+                    transition: $trans;
+                    position: relative;
+                    top: -4px;
+
+                    &:hover {
+                        transform: rotate(-10deg);
+                    }
                 }
             }
+        }
 
-            .icon {
-                display: flex;
-                justify-items: center;
-                align-items: center;
+        &-company {
+            align-self: center;
 
-            }
-
-            img {
-                height: 24px;
-                padding: 0 12px;
-                transition: $trans;
-                position: relative;
-                top: -4px;
-
-                &:hover {
-                    transform: rotate(-10deg);
-                }
-            }
         }
     }
 }
 
 @include respond-below(sm) {
-    .footer{
-        height:auto;
+    .footer {
+        height: auto;
         flex-direction: column-reverse;
         justify-content: center;
         align-content: center;
-        &-company{
+
+        &-company {
             padding: 8px 0;
         }
-        ul{
+
+        &-links {
             flex-direction: column;
-            margin:0;
-            padding:0;
-            li{
-                margin: 8px 0;
-                &:last-child{
-                    display: inline-block;
+
+            ul {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                margin-bottom: 8px;
+
+                &:last-child {
+                    flex-direction: row;
+                }
+
+                li {
+                    margin: 8px 0;
+                    // &:last-child{
+                    //     display: inline-block;
+                    // }
                 }
             }
         }
+
+
     }
 }
