@@ -12,12 +12,10 @@ export default class SliderS extends Component {
     const settings = {
       dots: false,
       infinite: true,
-      speed: 500,
       autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
       arrows: false,
-      fade: true
+      fade: true,
+      speed: 1000
     };
     return (
       <div className="slider-home">

@@ -307,6 +307,12 @@ html {
     pointer-events: none;
     opacity: 0.4;
 }
+.svg-loader{
+    display:flex;
+    width:100vw;
+    height:100vh;
+    justify-content: center;
+}
 
 @include respond-below(md) {
     .container {

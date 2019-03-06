@@ -5,6 +5,7 @@ import Footer from "../global/Footer";
 import { GetProducts } from "../../ducks/products";
 import { GetCartItems } from "../../ducks/cart";
 import { bindActionCreators } from "redux";
+import Loading from "../global/Loading";
 
 import CheckoutItems from "./CheckoutItems";
 import StepOne from "./StepOne";
@@ -20,7 +21,7 @@ class CheckoutContainer extends Component {
   }
 
   render() {
-    if (this.props.payments.processing === false) {
+    if (this.props.payments.processing === false && this.props.cart.cart) {
       console.log(this.props);
       return (
         <div className="container">
@@ -33,7 +34,11 @@ class CheckoutContainer extends Component {
         </div>
       );
     } else {
-      return <div />;
+      return (
+        <div>
+          <Loading />
+        </div>
+      );
     }
   }
 }

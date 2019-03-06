@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import smoothscroll from "smoothscroll-polyfill";
 
 import Menu from "../global/Menu";
 import Loading from "../global/Loading";
@@ -22,10 +23,17 @@ require("./BrewGuides.scss");
 class BrewGuides extends Component {
   componentDidMount() {
     const { products, categories, collections } = this.props;
+    smoothscroll.polyfill();
 
     if (!products.fetched) {
       this.props.GetProducts();
     }
+  }
+  smoothScroll(e) {
+    e.preventDefault();
+    document
+      .querySelector(e.target.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   }
 
   render() {
@@ -41,19 +49,35 @@ class BrewGuides extends Component {
             <div className="brew">
               <div className="brew-header">Brew Guides</div>
               <div className="brew-methods">
-                <a href="" className="brew-methods-item">
+                <a
+                  href="#french"
+                  onClick={e => this.smoothScroll(e)}
+                  className="brew-methods-item"
+                >
                   <img src={french} />
                   <span>French Press</span>
                 </a>
-                <a href="" className="brew-methods-item">
+                <a
+                  href="#moka"
+                  onClick={e => this.smoothScroll(e)}
+                  className="brew-methods-item"
+                >
                   <img src={moka} />
                   <span>Kawiarka</span>
                 </a>
-                <a href="" className="brew-methods-item">
+                <a
+                  href="#aero"
+                  onClick={e => this.smoothScroll(e)}
+                  className="brew-methods-item"
+                >
                   <img src={aero} />
                   <span>Aeropress</span>
                 </a>
-                <a href="" className="brew-methods-item">
+                <a
+                  href="#chemex"
+                  onClick={e => this.smoothScroll(e)}
+                  className="brew-methods-item"
+                >
                   <img src={chemex} />
                   <span>Chemex</span>
                 </a>
@@ -92,7 +116,7 @@ class BrewGuides extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="brew-item">
+              <div id="french" className="brew-item">
                 <div className="brew-item-left">
                   <img src={french} />
                   <div className="brew-item-left-recipe">
@@ -172,7 +196,7 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div className="brew-item">
+              <div id="moka" className="brew-item">
                 <div className="brew-item-left">
                   <img src={moka} />
                   <div className="brew-item-left-recipe">
@@ -263,7 +287,7 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div className="brew-item">
+              <div id="aero" className="brew-item">
                 <div className="brew-item-left">
                   <img src={aero} />
                   <div className="brew-item-left-recipe">
@@ -351,7 +375,7 @@ class BrewGuides extends Component {
                   </div>
                 </div>
               </div>
-              <div className="brew-item">
+              <div id="chemex" className="brew-item">
                 <div className="brew-item-left">
                   <img src={chemex} />
                   <div className="brew-item-left-recipe">

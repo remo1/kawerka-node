@@ -112,7 +112,7 @@
 .ham {
     display: none;
     width: 40px;
-    height: 45px;
+    height: 22px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -209,9 +209,23 @@
 
 
 @include respond-below(md) {
+    .nav-logo {
+        display: flex;
+        align-content: center;
+        padding-left: 8px;
+        width:24px;
+        a {
+            display: flex;
+            align-content: center;
+            img{
+                max-height: 50px;
+            }
+        }
+    }
+
     .nav {
         &-mobile {
-            height: 100px;
+            height: 70px;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -238,6 +252,7 @@
     }
 
     .nav-container {
+        height:70px;
         ul {
             width: 100%;
             height: auto;

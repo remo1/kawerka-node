@@ -8,7 +8,6 @@ import SingleProduct from "./SingleProduct";
 
 import Loading from "../global/Loading";
 import { selectedProduct } from "../../ducks/product";
-
 import { GetProducts } from "../../ducks/products";
 
 class Product extends Component {
@@ -38,7 +37,11 @@ class Product extends Component {
         </div>
       );
     } else {
-      return <div>asd</div>;
+      return(
+      <div>
+      <Loading /> 
+    </div>
+    )
     }
   }
 }

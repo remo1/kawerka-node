@@ -99,7 +99,9 @@
         }
     }
 
-    .slider-content {}
+    .empty {
+        min-width: 0;
+    }
 }
 
 @include respond-below(md) {

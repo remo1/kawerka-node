@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import Loading from "../global/Loading";
 
 import ProductImage from "./ProductImage";
 require("./AllProducts.scss");
@@ -14,16 +15,10 @@ const AllProducts = props => {
           {props.products.data.map((item, index) => {
             if (item.display_item === true) {
               return (
-                <a
-                  className="show-all"
-                  href={"/kawa/" + item.id}
-                  key={index}
-                >
+                <a className="show-all" href={"/kawa/" + item.id} key={index}>
                   <ProductImage product={item} products={props.products} />
                   <div className="show-all-title">{item.name}</div>
-                  <div className="show-all-taste">
-                    {item.smak}
-                  </div>
+                  <div className="show-all-taste">{item.smak}</div>
                   <div className="arrow" />
                   <div className="show-all-info">{item.origin}</div>
                   <div className="show-all-price">
@@ -36,6 +31,10 @@ const AllProducts = props => {
         </div>
       </div>
     );
+  } else {
+    <div>
+      <Loading />
+    </div>;
   }
 };
 

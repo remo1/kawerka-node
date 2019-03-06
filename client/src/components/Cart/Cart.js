@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Loading from "../global/Loading";
+
 import Menu from "../global/Menu";
 import Footer from "../global/Footer";
 import CartItems from "./CartItems";
@@ -35,7 +37,11 @@ class Cart extends Component {
         </div>
       );
     } else {
-      return <div />;
+      return (
+        <div>
+          <Loading />
+        </div>
+      );
     }
   }
 }

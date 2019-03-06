@@ -3,6 +3,7 @@
 
 .brew {
     padding: 0 8px;
+
     &-header {
         font-size: 36px;
         text-transform: lowercase;
@@ -43,7 +44,8 @@
                 }
 
                 img {
-                    transform: rotate(-10deg)
+                    transform: rotate(-10deg);
+                    pointer-events: none;
                 }
             }
 
@@ -51,7 +53,7 @@
                 content: url('../../assets/img/arrow.svg');
                 position: absolute;
                 top: 0;
-                right: -19px;
+                right: -20px;
                 // transform: scale(-1, 1);
                 transform: rotate(90deg)
             }
@@ -60,7 +62,7 @@
                 content: url('../../assets/img/arrow.svg');
                 position: absolute;
                 bottom: 0;
-                right: -17px;
+                right: -20px;
                 // transform: scale(-1, 1);
                 transform: rotate(-90deg)
             }
@@ -191,7 +193,8 @@
                 text-transform: lowercase;
                 text-align: center;
                 padding: 8px 0;
-                span{
+
+                span {
                     font-size: 14px;
                     font-family: 'core-body';
                     display: block;
@@ -236,21 +239,54 @@
 }
 
 @include respond-between(xxs, xs) {
-  .brew-item{
-      flex-direction: column;
-      align-content: center;
-      &-left{
-          width:100%;
-      }
-      &-right{
-          width:100%;
-      }
-  }
-  .brew-methods-item span{
-      font-size:14px;
-  }
-  .brew-item-right-header, .brew-header, .brew-item-right-header{
-      font-size:32px;
-      line-height: 32px;
-  }
+    .brew-methods {
+        flex-wrap: wrap;
+
+        &-item {
+            width: 50%;
+            margin: 12px 0;
+            border: 0;
+            justify-content: center;
+            align-content: center;
+            img {
+                max-height: 100px;
+                width:auto;
+
+            }
+
+            &::before {
+                content: none;
+
+            }
+
+            &::after {
+                content: none;
+
+            }
+        }
+    }
+
+    .brew-item {
+        flex-direction: column;
+        align-content: center;
+
+        &-left {
+            width: 100%;
+        }
+
+        &-right {
+            width: 100%;
+        }
+    }
+
+    .brew-methods-item span {
+        font-size: 14px;
+    }
+
+    .brew-item-right-header,
+    .brew-header,
+    .brew-item-right-header {
+        font-size: 32px;
+        line-height: 32px;
+    }
 }

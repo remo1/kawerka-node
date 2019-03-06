@@ -5,6 +5,8 @@ import ProductTitle from "./Buy/ProductTitle";
 import ProductBuy from "./Buy/ProductBuy";
 import AddToCartButton from "./Buy/AddToCartButton";
 import InfoDropdowns from "./InfoDropdowns";
+import Loading from "../global/Loading";
+
 require("./SingleProduct.scss");
 
 const mapStateToProps = state => {
@@ -40,7 +42,11 @@ class SingleProduct extends Component {
         </div>
       );
     } else {
-      return <div>asd</div>;
+      return (
+        <div>
+          <Loading /> 
+        </div>
+      );
     }
   }
 }

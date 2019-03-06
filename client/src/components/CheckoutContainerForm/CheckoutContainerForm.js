@@ -7,6 +7,7 @@ import { GetCartItems } from "../../ducks/cart";
 import { bindActionCreators } from "redux";
 import CheckoutForm from "./CheckoutForm";
 import StepTwo from "./StepTwo";
+import Loading from "../global/Loading";
 
 function mapStateToProps(state) {
   return state;
@@ -32,7 +33,11 @@ class CheckoutContainer extends Component {
         </div>
       );
     } else {
-      return <div />;
+      return (
+        <div>
+          <Loading />
+        </div>
+      );
     }
   }
 }
