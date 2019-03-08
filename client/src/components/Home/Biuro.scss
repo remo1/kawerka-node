@@ -7,9 +7,10 @@
 
     .slider-image {
         align-items: flex-end;
+
         img {
             position: relative;
-          //  top: -23px;
+            //  top: -23px;
             height: 110%;
             width: auto;
         }
@@ -24,6 +25,10 @@
         p {
             margin: 8px 40px;
         }
+
+        a {
+            margin-top: 8px;
+        }
     }
 
     .slider-content {
@@ -32,20 +37,31 @@
 
 }
 
+@include respond-between(xs, md) {
+    .biuro {
+        margin-top: 0px;
+        height: auto !important;
+        position: relative;
+    }
+}
+
 @include respond-between(xxs, xs) {
     .biuro {
         margin-top: 40px;
         height: auto !important;
         position: relative;
+
         .header-text {
             font-size: 48px;
             line-height: 48px;
         }
+
         .slider-copy {
             padding-top: 24px;
-            p{
+
+            p {
                 margin: 8px;
-                padding:0;
+                padding: 0;
             }
         }
 
@@ -54,7 +70,8 @@
             left: 14px;
             bottom: 0px;
             opacity: 0.4;
-            margin:0;
+            margin: 0;
+
             img {
                 height: 100%;
                 width: auto;

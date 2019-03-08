@@ -38,27 +38,26 @@ class Pomagaj extends Component {
       return (
         <div className="container">
           <Menu />
-          <div className="container-rest regulamin">
+          <div className="container-rest regulamin pomagaj">
             <div className="border">
               <div className="slider-content">
                 <div className="slider-copy">
                   <div className="header-text">pomagaj z kawerką</div>
                   <div className="copy pomagaj">
                     <p>
-                      Kupując kawę przez naszą stronę internetową wspomagasz
-                      Fundacje Siepomaga. Wierzymy, że możesz pić doskonałą kawę
-                      i jednocześnie pomagać potrzebującym. Właśnie dlatego
-                      założyliśmy skarbonkę na stronie internetowej Fundacji
-                      Siepomaga.
+                      Kupując naszą kawę wspomagasz Fundację Siepomaga.
+                      Wierzymy, że możesz pić doskonałą kawę i jednocześnie
+                      pomagać potrzebującym. Właśnie dlatego założyliśmy
+                      skarbonkę na stronie internetowej Fundacji Siepomaga.
                     </p>
                     <p>
-                    Za każde sprzedane 250g kawy w <strong>ofercie detalicznej</strong>, przeznaczamy 1zł na rzecz Fundacji Siepomaga.
+                      Za każde sprzedane 250g kawy w{" "}
+                      <strong>ofercie detalicznej</strong> oraz 1000g kawy w{" "}
+                      <strong>ofercie B2B</strong>, przeznaczamy 1zł na rzecz
+                      Fundacji Siepomaga.
                     </p>
-                    <p>
-                    Za każde sprzedane 1000g kawy w <strong>ofercie B2B</strong>, przeznaczamy 1zł na rzecz Fundacji Siepomaga.
-                    </p>
-                    <p>Pamiętaj kupując – pomagasz!</p>
-                    <p>Wpłaty do skarbonki są wykonywane raz w miesiącu.</p>
+                    <p>Pamiętaj, kupując – pomagasz!</p>
+                    <p>Wpłaty do skarbonki są wykonywane są raz w miesiącu.</p>
                     <p>
                       <a
                         href="https://siepomaga.pl/kawerka"

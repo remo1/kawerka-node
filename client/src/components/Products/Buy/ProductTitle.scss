@@ -22,7 +22,7 @@
         font-size: 48px;
         font-family: 'hanley';
         text-align: center;
-        line-height: 48px;
+        line-height: 70px;
     }
 
     &-taste {
@@ -38,10 +38,6 @@
             padding: 14px 8px;
             //   margin: 0 32px;
             color: $highlight;
-            border-left: 1px solid $text;
-            border-right: 1px solid $text;
-            border-bottom: 1px solid $text;
-
         }
     }
 }
@@ -68,10 +64,6 @@
                 margin: 0 24px;
                 //   margin: 0 32px;
                 color: $highlight;
-                border-left: 1px solid $text;
-                border-right: 1px solid $text;
-                border-bottom: 1px solid $text;
-
             }
         }
     }

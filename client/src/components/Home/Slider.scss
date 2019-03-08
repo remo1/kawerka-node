@@ -12,7 +12,86 @@
 }
 
 .slider-home {
-    margin-top: 50px;
+    margin-top: 8px;
+}
+
+.slick {
+    color: transparent;
+    position: relative;
+
+    &-dots {
+        list-style: none;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+
+        .slick-active {
+            zoom: 1;
+            opacity: 1;
+            transition: $trans;
+
+
+        }
+
+        li {
+            margin: 0 4px;
+            zoom: .7;
+            opacity: 0.6;
+            transition: $trans;
+            color: transparent;
+            button {
+                background: $text;
+                color: transparent;
+                transition: $trans;
+                border-radius: 100%;
+                border: 0;
+                height:18px;
+                width:18px;
+            }
+        }
+    }
+
+    &-arrow {
+        position: absolute;
+        z-index: 9;
+        top: 50%;
+        background: none;
+        border: 0;
+        color: transparent;
+        opacity: 0.6;
+        cursor: pointer;
+        width: 82px;
+        height: 30px;
+        transition: $trans;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &-next {
+        right: 0;
+        transform: scaleX(-1);
+        right: -82px;
+
+        &:before {
+            content: url('../../assets/img/arrow.svg');
+            color: $text;
+            zoom: 2;
+
+        }
+    }
+
+    &-prev {
+        left: -82px;
+
+        &:before {
+            content: url('../../assets/img/arrow.svg');
+            color: $text;
+            zoom: 2;
+        }
+    }
 }
 
 .slider {
@@ -24,6 +103,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+
         .inner {
             //  
             position: relative;
@@ -36,10 +116,11 @@
         align-items: center;
         justify-content: center;
         height: 100%;
-        width:100%;
+        width: 100%;
+
         img {
             pointer-events: none;
-       //     width: 100%;
+            //     width: 100%;
             max-height: 600px;
             max-width: 450px;
         }
@@ -147,7 +228,8 @@
 
         &-image {
             max-width: 320px;
-            img{
+
+            img {
                 max-height: 225px;
             }
         }
@@ -155,7 +237,7 @@
     }
 }
 
-@include respond-between(xxs, xs) {
+@include respond-between(xxs, md) {
     .border {
         height: auto !important;
     }
@@ -199,7 +281,8 @@
         &-image {
             max-width: 120px;
             margin: 24px 0;
-            img{
+
+            img {
                 max-height: 225px;
                 max-width: 300px;
             }

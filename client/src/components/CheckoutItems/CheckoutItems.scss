@@ -5,6 +5,8 @@
     grid-column: 1;
     // width: 320px;
     justify-self: center;
+    padding-bottom:32px;
+
     align-self: center;
     .button {
         display: inline-block;
@@ -83,6 +85,11 @@
 
     &-help {
         color: $highlight !important;
+        span{
+            width:50%;
+            justify-content: flex-end;
+            display: flex;
+        }
     }
 
     &-total {

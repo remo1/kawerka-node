@@ -27,6 +27,7 @@ class OfertaBiurowa extends Component {
     let showOnClick = e => {
       console.log(e.target.nextSibling);
       e.target.nextSibling.classList.toggle("dropdowns-hide");
+      e.target.classList.toggle("highlight");
     };
     if (this.props.products !== null) {
       return (
@@ -40,29 +41,39 @@ class OfertaBiurowa extends Component {
                   <div className="circle" />
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twoim biurze</span>
-                    <span>V</span>
-                  </div>
+                    <span>
+            <img
+              alt=""
+              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+              height="25px"
+              width="35px"
+            />
+          </span>                     </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
                       {" "}
                       <strong>Świetny pomysł!</strong> Kawerka Coffee Company
-                      wierzy że dobra kawa poprawia komfort pracy i pozytywnie
-                      wpływa na produktywość. Specjalnie przygotowana oferta kaw
-                      Single Origin pomoże zmienić Twoje biuro nie do poznania.
+                      wierzy, że dobra kawa poprawia komfort pracy i pozytywnie
+                      wpływa na produktywność. Specjalnie przygotowana oferta
+                      kaw Single Origin pomoże zmienić Twoje biuro nie do
+                      poznania.
                     </p>
                     <p>
-                      Nie jesteś osobą decyzyjną jeżeli chodzi o kawę w Twoim
-                      biurze? <strong>Nie ma problemu.</strong> Skontaktuj się z
-                      nami, a my wyślemy Ci tester do Twojego biura.
+                      Nie wiesz jak to zmienić?{" "}
+                      <strong>To bardzo proste.</strong> Skontaktuj się z nami,
+                      aby otrzymać tester swieżo palonej kawy do Twojego biura.
                     </p>
                     <p>
-                      Jeżeli Twoje biuro nawiąże z nami współprace, otrzymasz
-                      10% wartości pierwszego zamówienia!
+                      Jeżeli Twoje biuro nawiąże z nami współpracę, otrzymasz 
+                      <strong> 10%</strong> wartości pierwszego zamówienia!
                     </p>
-                    <a href="" className="button button-red">
+                    <a
+                      href="mailto:kontakt@kawerka.pl"
+                      className="button button-red"
+                    >
                       Wyślij email
                     </a>
-                    <a href="" className="button button-red">
+                    <a href="tel:48730070539" className="button button-red">
                       Zadzwoń
                     </a>
                   </div>
@@ -71,8 +82,14 @@ class OfertaBiurowa extends Component {
                   <div className="circle" />
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twojej restauracji</span>
-                    <span>V</span>
-                  </div>
+                    <span>
+            <img
+              alt=""
+              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+              height="25px"
+              width="35px"
+            />
+          </span>                     </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
                       <strong>
@@ -82,20 +99,25 @@ class OfertaBiurowa extends Component {
                       ich nietuzinkowym smakiem espresso.
                     </p>
                     <p>
-                      Jeżeli zdecydujesz się na współprace z nami, poza
+                      Jeżeli zdecydujesz się na współpracę z nami, poza
                       przepyszną kawą,{" "}
-                      <strong>
-                        przeprowadzimy specjalny kurs, który nauczy Twoich
-                        pracowników jak najlepiej przyżądźać kawy Single Origin.
-                      </strong>
+                      <strong>przeprowadzimy specjalny kurs</strong>, który
+                      nauczy Twoich pracowników jak najlepiej przyrządźać kawy
+                      Single Origin oraz{" "}
+                      <strong>ustawimy Twój ekspres do kawy </strong> pod nasze
+                      ziarna!
                     </p>
+                     
                     <p>
-                      Skontaktuj się z nami jeżeli chcesz dowiedzieć się więcej!
+                      Skontaktuj się z nami, jeżeli chcesz dowiedzieć się więcej!
                     </p>
-                    <a href="" className="button button-red">
+                    <a
+                      href="mailto:kontakt@kawerka.pl"
+                      className="button button-red"
+                    >
                       Wyślij email
                     </a>
-                    <a href="" className="button button-red">
+                    <a href="tel:48730070539" className="button button-red">
                       Zadzwoń
                     </a>
                   </div>
@@ -104,29 +126,59 @@ class OfertaBiurowa extends Component {
                   <div className="circle" />
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twojej kawiarni</span>
-                    <span>V</span>
-                  </div>
+                    <span>
+            <img
+              alt=""
+              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+              height="25px"
+              width="35px"
+            />
+          </span>                     </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
-                     Jesteś właścicielem kawiarni? Na pewno znasz i doceniasz smak kaw Single Origin. Z nami możesz być pewien że każde zamówienie jest <strong>świeżo palone i przygotowane specjalnie dla Ciebie.</strong>
+                      Jesteś właścicielem kawiarni? Na pewno znasz i doceniasz
+                      smak kaw Single Origin. Z nami możesz być pewien, że każde
+                      zamówienie jest{" "}
+                      <strong>
+                        świeżo palone i przygotowane specjalnie dla Ciebie.
+                      </strong>
                     </p>
                     <p>
-                        Wiesz że każde ziarne mogą być wypalone w różnym stopniu. Napisz do nas, a <strong>przygotujemy Twojej kawiarni specjalny profil kawy,</strong> który będzie odpowiadał Twoim wymaganiom.
+                      Każde ziarna w naszej ofercie mogą być wypalone w różnym stopniu.
+                      Napisz do nas, a{" "}
+                      <strong>
+                        przygotujemy Twojej kawiarni specjalny profil kawy,
+                      </strong>{" "}
+                      który będzie odpowiadał Twoim wymaganiom.
                     </p>
                     <p>
-                      Odezwij się do nas, a my zaopatrzymy Cię w najlepszej jakości kawę.
+                      Odezwij się do nas, a my zaopatrzymy Cię w kawę najlepszej
+                      jakości.
                     </p>
-                    <a href="" className="button button-red">
+                    <a
+                      href="mailto:kontakt@kawerka.pl"
+                      className="button button-red"
+                    >
                       Wyślij email
                     </a>
-                    <a href="" className="button button-red">
+                    <a href="tel:48730070539" className="button button-red">
                       Zadzwoń
                     </a>
                   </div>
                   <div className="circle" />
                 </div>
               </div>
-              <div className="info-siepomaga">Za każde sprzedane 1000g kawy w ofercie b2b, przeznaczamy 1zł na rzecz Fundacji Siepomaga. Kupując - Pomagasz.</div>
+              <div className="info-siepomaga">
+                <p>Kupujesz - Pomagasz!</p>
+
+                <p>
+                  {" "}
+                  Za każde sprzedane 250g kawy w{" "}
+                  <strong>ofercie detalicznej</strong> oraz 1000g kawy w{" "}
+                  <strong>ofercie B2B</strong>, przeznaczamy 1zł na rzecz
+                  Fundacji Siepomaga.
+                </p>
+              </div>
             </div>
           </div>
           <Footer />

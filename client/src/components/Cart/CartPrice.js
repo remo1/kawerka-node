@@ -37,7 +37,7 @@ class CartItems extends Component {
             </p>
           </div>
           <a className={items.length > 0 ? 'button button-red' : 'disable button button-red'} href="/checkout">
-            checkout
+                Podsumowanie zakupu
           </a>
         </div>
       </div>

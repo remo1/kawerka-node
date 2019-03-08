@@ -10,12 +10,13 @@ require("./Slider.scss");
 export default class SliderS extends Component {
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       autoplay: true,
-      arrows: false,
       fade: true,
-      speed: 1000
+      speed: 1000,
+      autoplaySpeed: 5000,
+      arrows: true
     };
     return (
       <div className="slider-home">
@@ -35,17 +36,13 @@ export default class SliderS extends Component {
               <div className="slider-copy">
                 <div className="header-text">
                   świeżo palona kawa
-                  {/* <span>świeżo</span>
-                  <span>palona</span>
-                  <span>kawa</span> */}
                 </div>
                 <div className="copy">
                   <div className="arrow" />
                   <p>
-                    Wszystkie ziarna które używamy są etycznie pozyskiwane oraz
-                    pochodzą z upraw FAIR TRADE.
+                  Wykorzystywane przez nas ziarna kawy są <strong>etycznie pozyskiwane</strong> i pochodzą z upraw <strong>FAIR TRAID.</strong>
                   </p>
-                  <a href="/" className="button button-red">
+                  <a href="/sklep" className="button button-red">
                     ZOBACZ WIĘCEJ!
                   </a>
                 </div>

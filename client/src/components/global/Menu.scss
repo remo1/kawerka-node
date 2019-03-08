@@ -54,7 +54,22 @@
             li {
                 list-style: none;
                 margin: 0 4px;
+
                 //    display:none;
+                .active {
+                    background-color: $text;
+                    color: white!important;
+                    border: 2px solid $text!important;
+                    svg {
+                        height: 24px;
+                        width: auto;
+                        fill: white;
+                    }
+                    .cart-circle {
+                        background-color: white;
+                        color: $text;
+                    }
+                }
 
                 a {
 
@@ -91,7 +106,7 @@
 
                         .cart-circle {
                             background-color: white;
-                            color:$text;
+                            color: $text;
                         }
                     }
                 }
@@ -199,11 +214,11 @@
     right: 5px;
     bottom: 5px;
     border-radius: 100%;
-    display:flex;
-    color:white;
+    display: flex;
+    color: white;
     justify-content: center;
     align-items: center;
-    font-size:12px;
+    font-size: 12px;
     font-family: 'core-cta';
 }
 
@@ -213,11 +228,13 @@
         display: flex;
         align-content: center;
         padding-left: 8px;
-        width:24px;
+        width: 24px;
+
         a {
             display: flex;
             align-content: center;
-            img{
+
+            img {
                 max-height: 50px;
             }
         }
@@ -252,7 +269,8 @@
     }
 
     .nav-container {
-        height:70px;
+        height: 70px;
+
         ul {
             width: 100%;
             height: auto;

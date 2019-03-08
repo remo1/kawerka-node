@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Component } from "react";
 import { GetCartItems } from "../../ducks/cart";
 
@@ -38,9 +38,9 @@ class HeaderNav extends Component {
       <div className="nav-container">
         <div className="nav-mobile">
           <div className="nav-logo">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} alt="kawerka coffee company" />
-            </Link>
+            </NavLink>
           </div>
 
           <div onClick={e => this.openHam(e)} className="ham">
@@ -52,24 +52,24 @@ class HeaderNav extends Component {
 
         <ul>
           <li>
-            <Link to="/sklep">sklep</Link>
+            <NavLink to="/sklep">sklep</NavLink>
           </li>
           <li>
-            <Link to="/oferta-dla-firm">oferta dla firm</Link>
+            <NavLink to="/oferta-dla-firm">oferta dla firm</NavLink>
           </li>
           <li>
-            <Link to="/brew-guides">brew guides</Link>
+            <NavLink to="/brew-guides">brew guides</NavLink>
           </li>
           <li>
-            <Link className="button-menu" to="/pomagaj-z-kawerka">
+            <NavLink className="button-menu" to="/pomagaj-z-kawerka">
               pomagaj z kawerką
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/kontakt">kontakt</Link>
+            <NavLink to="/kontakt">kontakt</NavLink>
           </li>
           <li>
-            <Link to="/koszyk">
+            <NavLink to="/koszyk">
               <svg width="41px" height="36px" viewBox="0 0 41 36" version="1.1">
                 <g id="Page-1" stroke="none" strokeWidth="1">
                   <g
@@ -89,7 +89,7 @@ class HeaderNav extends Component {
                 </g>
               </svg>
               {this.cartItems()}
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -1,3 +1,5 @@
+@import '../global/vars.scss';
+
 .oferta-biurowa {
     &-header {
         font-size: 36px;
@@ -12,8 +14,19 @@
         margin-right: 8px;
     }
 
+    .highlight {
+        span {
+            color: $highlight;
+        }
+        img{
+            transform: rotate(180deg)
+        }
+    }
+
+
     .info-siepomaga {
         text-align: center;
+        font-size: 12px;
 
     }
 }

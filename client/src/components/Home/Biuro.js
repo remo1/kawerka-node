@@ -24,11 +24,11 @@ class Biuro extends Component {
           </div>
           <div className="slider-copy">
             <div className="header-text">oferta dla firm</div>
+            <div className="arrow" />
+
             <div className="copy">
-              <div className="arrow" />
               <p>
-                Zamów świeżo paloną kawę do swojego miejsca pracy i otrzymaj 10%
-                pierwszego zamówienia!
+                Nie smakuje Ci kawa w Twoim biurze? Zaproponuj Kawerkę i otrzymaj <strong>10%</strong> wartości pierwszego zamówienia.
               </p>
               <a href="/oferta-dla-firm" className="button button-red">
                 ZOBACZ WIĘCEJ!

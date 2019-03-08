@@ -26,8 +26,7 @@ class BrewGuidesHome extends Component {
           <div className="copy">
             <div className="arrow" />
             <p>
-              Zamów świeżo paloną kawę do swojego miejsca pracy i otrzymaj 10%
-              pierwszego zamówienia!
+              Cztery sposoby na przygotowanie przepysznej Kawerki.
             </p>
             <a href="/oferta-dla-firm" className="button button-red">
               ZOBACZ WIĘCEJ!
