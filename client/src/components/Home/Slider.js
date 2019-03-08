@@ -75,9 +75,15 @@ export default class SliderS extends Component {
               <div className="slider-copy">
                 <div className="header-text">pomagaj razem z kawerką</div>
                 <div className="copy">
-                  <div className="arrow">
-                    <div className="arrow-left" />
-                    <div className="arrow-right" />
+                <div className="arrow">
+                    <div className="arrow-left">
+                      <img src={arrow} alt="" />
+                    </div>
+                    <div className="arrow-line" />
+
+                    <div className="arrow-right">
+                      <img src={arrow} alt="" />
+                    </div>
                   </div>
                   <p>
                     Za każde sprzedane 250g kawy w ofercie detalicznej,
