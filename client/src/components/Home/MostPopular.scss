@@ -13,9 +13,14 @@
         transition:$trans;
 
     }
-    &:hover{
-        img{
+    &:hover {
+        img {
             transform: rotate(-10deg);
+        }
+        .arrow {
+            img {
+                transform: none !important;
+            }
         }
     }
     &-wrapper{
@@ -69,9 +74,12 @@
 
 @include respond-below(xs) {
     .most-popular{
-        width: 55%;
+        width: 90%;
         &-wrapper{
            // padding: 0 8px;
+           .most-img{
+               width:55%;
+           }
         }
         &-items{
             display: flex;

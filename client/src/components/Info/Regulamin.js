@@ -46,8 +46,10 @@ class Regulamin extends Component {
                     regulamin
                   </div>
                   <div className="copy">
-                    <div className="arrow" />
-                    <p className="no-margin">§ 1
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                    <p className="no-margin">§ 1
                     <p className="no-margin">Postanowienia wstępne</p>
                     <p>
                       <ul className="reg">

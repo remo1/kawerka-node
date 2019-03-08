@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ProductImage from "../Products/ProductImage";
 
 require("./MostPopular.scss");
+let arrow = require("../../assets/img/arrow.svg");
 
 function mapStateToProps(state) {
   return state;
@@ -18,7 +19,6 @@ class MostPopular extends Component {
           mostPopularArray.push(item);
         }
       });
-      console.log(mostPopularArray);
       return (
         <div className="most-popular-wrapper">
           <div className="most-popular-header">najchętniej kupowane:</div>
@@ -32,17 +32,31 @@ class MostPopular extends Component {
                 >
                   <ProductImage product={item} products={products} />
                   <div className="most-popular-title">{item.name}</div>
-                  <div className="most-popular-taste">{item.smak.replace('-', '∙')}</div>
-                  <div className="arrow" />
+                  <div className="most-popular-taste">
+                    {item.smak.replace("-", "∙")}
+                  </div>
+                  <div className="arrow">
+                    <div className="arrow-left">
+                      <img src={arrow} alt="" />
+                    </div>
+                    <div className="arrow-line" />
+                    <div className="arrow-right">
+                      <img src={arrow} alt="" />
+                    </div>
+                  </div>
                   <div className="most-popular-info">{item.origin}</div>
-                  <div className="most-popular-price">od {item.price[0].amount / 100}zł</div>
-
+                  <div className="most-popular-price">
+                    od {item.price[0].amount / 100}zł
+                  </div>
                 </a>
               );
             })}
           </div>
-          <a href='/sklep' className="button button-red most-popular-button"> zobacz wszystkie produkty </a>
-        </div> 
+          <a href="/sklep" className="button button-red most-popular-button">
+            {" "}
+            zobacz wszystkie produkty{" "}
+          </a>
+        </div>
       );
     } else {
       return <div>1</div>;

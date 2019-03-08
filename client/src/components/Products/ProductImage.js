@@ -16,11 +16,12 @@ const ProductImage = props => {
     return (
       (
         <img
+        className="most-img" 
           alt={props.product.name + '-' + props.product.description}
           src={file.link.href}
           style={{ background: props.background }}
         />
-      ) || <img alt="placeholder" src={placeholder} />
+      ) || <img className="most-img"  alt="placeholder" src={placeholder} />
     );
   };
 
@@ -31,14 +32,14 @@ const ProductImage = props => {
         return fileId === el.id;
       });
       return (
-        <img
+        <img className="most-img" 
           alt={props.product.name + ', ' + props.product.description}
           src={file.link.href}
           style={{ background: props.background }}
         />
       );
     } catch (e) {
-      return <img alt="placeholder" src={placeholder} />;
+      return <img className="most-img"  alt="placeholder" src={placeholder} />;
     }
   };
 

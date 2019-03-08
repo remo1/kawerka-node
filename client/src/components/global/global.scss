@@ -255,62 +255,125 @@ html {
     }
 }
 
-.arrow {
+.arrow{
     position: relative;
     width: 100%;
     height: 1px;
-    background-color: $text;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-bottom: 6px;
 
-    &:after {
-        content: url('../../assets/img/arrow.svg');
-        position: absolute;
-        top: -9px;
-        left: 0;
+    &-line {
+        height: 1px;
+        background-color: $text;
+        position: relative;
+        width: 100%;
+        top: 6px;
     }
 
-    &:before {
-        content: url('../../assets/img/arrow.svg');
-        position: absolute;
-        top: -9px;
-        right: 0;
-        transform: scale(-1, 1);
+    &-left {
+        position: relative;
+        width: 39px;
 
+        img {
+            position: absolute;
+            height: 12px;
+            top: 0;
+            width: 39px;
+        }
+    }
+
+    &-right {
+        position: relative;
+        transform: scale(-1, 1);
+        width: 39px;
+
+        img {
+            position: absolute;
+            height: 12px;
+            width: 39px;
+            top: 0;
+        }
     }
 }
-
-.circle {
+.circle{
     position: relative;
     width: 100%;
     height: 1px;
-    background-color: $text;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
 
-    &:after {
-        content: url('../../assets/img/circle.svg');
-        position: absolute;
-        top: -10px;
-        left: 0;
+    &-line {
+        height: 1px;
+        background-color: $text;
+        position: relative;
+        width: 100%;
+        top: 7px;
+    }
+
+    &-left {
+        position: relative;
+        width: 33px;
         transform: scale(-1, 1);
 
+        img {
+            position: absolute;
+            height: 12px;
+            top: 0;
+            width: 33px;
+        }
     }
 
-    &:before {
-        content: url('../../assets/img/circle.svg');
-        position: absolute;
-        top: -10px;
-        right: 0;
-        transform: scale(1, 1);
+    &-right {
+        position: relative;
+        width: 33px;
 
+        img {
+            position: absolute;
+            height: 12px;
+            width: 33px;
+            top: 0;
+        }
     }
 }
+// .circle {
+//     position: relative;
+//     width: 100%;
+//     height: 1px;
+//     background-color: $text;
+
+//     &:after {
+//         content: url('../../assets/img/circle.svg');
+//         position: absolute;
+//         top: -10px;
+//         left: 0;
+//         transform: scale(-1, 1);
+
+//     }
+
+//     &:before {
+//         content: url('../../assets/img/circle.svg');
+//         position: absolute;
+//         top: -10px;
+//         right: 0;
+//         transform: scale(1, 1);
+
+//     }
+// }
 
 .disable {
     pointer-events: none;
     opacity: 0.4;
 }
-.svg-loader{
-    display:flex;
-    width:100vw;
-    height:100vh;
+
+.svg-loader {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
 }
 
@@ -346,51 +409,31 @@ html {
 }
 
 @include respond-below(xs) {
-    .arrow {
-        position: relative;
-        width: 100%;
-        height: 1px;
-        background-color: $text;
 
-        &:after {
-            content: url('../../assets/img/arrow.svg');
-            position: absolute;
-            top: -10px;
-            left: 0;
-        }
 
-        &:before {
-            content: url('../../assets/img/arrow.svg');
-            position: absolute;
-            top: -10px;
-            right: 0;
-            transform: scale(-1, 1);
+    // .circle {
+    //     position: relative;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: $text;
 
-        }
-    }
-    .circle {
-        position: relative;
-        width: 100%;
-        height: 1px;
-        background-color: $text;
-    
-        &:after {
-            content: url('../../assets/img/circle.svg');
-            position: absolute;
-            top: -11px;
-            left: 0;
-            transform: scale(-1, 1);
-    
-        }
-    
-        &:before {
-            content: url('../../assets/img/circle.svg');
-            position: absolute;
-            top: -11px;
-            right: 0;
-            transform: scale(1, 1);
-    
-        }
-    }
+    //     &:after {
+    //         content: url('../../assets/img/circle.svg');
+    //         position: absolute;
+    //         top: -11px;
+    //         left: 0;
+    //         transform: scale(-1, 1);
+
+    //     }
+
+    //     &:before {
+    //         content: url('../../assets/img/circle.svg');
+    //         position: absolute;
+    //         top: -11px;
+    //         right: 0;
+    //         transform: scale(1, 1);
+
+    //     }
+    // }
 
 }

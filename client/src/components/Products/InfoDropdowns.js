@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 require("./InfoDropdowns.scss");
+let circle = require("../../assets/img/circle.svg");
 
 const InfoDropdowns = props => {
   let showOnClick = e => {
@@ -10,7 +11,15 @@ const InfoDropdowns = props => {
   return (
     <div className="dropdowns">
       <div className="dropdowns-open">
-        <div className="circle" />
+        <div className="circle">
+          <div className="circle-left">
+            <img src={circle} alt="" />
+          </div>
+          <div className="circle-line" />
+          <div className="circle-right">
+            <img src={circle} alt="" />
+          </div>
+        </div>
         <div onClick={e => showOnClick(e)} className="dropdowns-text">
           <span>ziarna</span>
           <span>
@@ -40,7 +49,15 @@ const InfoDropdowns = props => {
         </div>
       </div>
       <div className="dropdowns-open">
-        <div className="circle" />
+        <div className="circle">
+          <div className="circle-left">
+            <img src={circle} alt="" />
+          </div>
+          <div className="circle-line" />
+          <div className="circle-right">
+            <img src={circle} alt="" />
+          </div>
+        </div>
         <div onClick={e => showOnClick(e)} className="dropdowns-text">
           <span>kupujesz - pomagasz</span>
           <span>
@@ -64,7 +81,15 @@ const InfoDropdowns = props => {
         </div>
       </div>
       <div className="dropdowns-open">
-        <div className="circle" />
+        <div className="circle">
+          <div className="circle-left">
+            <img src={circle} alt="" />
+          </div>
+          <div className="circle-line" />
+          <div className="circle-right">
+            <img src={circle} alt="" />
+          </div>
+        </div>
         <div onClick={e => showOnClick(e)} className="dropdowns-text">
           <span>brew tips</span>
           <span>
@@ -89,7 +114,15 @@ const InfoDropdowns = props => {
         </div>
       </div>
       <div className="dropdowns-open">
-        <div className="circle" />
+        <div className="circle">
+          <div className="circle-left">
+            <img src={circle} alt="" />
+          </div>
+          <div className="circle-line" />
+          <div className="circle-right">
+            <img src={circle} alt="" />
+          </div>
+        </div>{" "}
         <div onClick={e => showOnClick(e)} className="dropdowns-text">
           <span>kawerka w twoim biurze</span>
           <span>
@@ -111,7 +144,15 @@ const InfoDropdowns = props => {
             </a>
           </p>
         </div>
-        <div className="circle" />
+        <div className="circle">
+          <div className="circle-left">
+            <img src={circle} alt="" />
+          </div>
+          <div className="circle-line" />
+          <div className="circle-right">
+            <img src={circle} alt="" />
+          </div>
+        </div>
       </div>
     </div>
   );

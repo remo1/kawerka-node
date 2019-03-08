@@ -46,8 +46,10 @@ class Platnosci extends Component {
                     płatności
                   </div>
                   <div className="copy">
-                    <div className="arrow" />
-                    <p> Wszystkie Płatności są obsługiwane przez PayU.</p>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                    <p> Wszystkie Płatności są obsługiwane przez PayU.</p>
                     <img src="https://www.payu.pl/themes/custom/bc_foundation/images/payu-logo.png"></img>
 
                   </div>

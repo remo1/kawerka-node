@@ -136,8 +136,10 @@ class BrewGuides extends Component {
                         <span>Czas parzenia:</span> 8 minuty lub mniej
                       </li>
                     </ul>
-                    <div className="arrow" />
-                  </div>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  </div>
                   <ul>
                     <span> Wymagane przedmioty:</span>
                     <li>French Press</li>
@@ -155,8 +157,10 @@ class BrewGuides extends Component {
                     French Press Brew Guide
                     <span> 500ml</span>
                   </div>
-                  <div className="arrow" />
-                  <div className="brew-item-right-method">
+    <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  <div className="brew-item-right-method">
                     <ul>
                       <span>Instrukcja:</span>
                       <li>
@@ -220,8 +224,10 @@ class BrewGuides extends Component {
                         <span>Czas parzenia:</span> 2 minuty, lub mniej
                       </li>
                     </ul>
-                    <div className="arrow" />
-                  </div>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  </div>
                   <ul>
                     <span> Wymagane przedmioty:</span>
                     <li>Kawiarka (Moka Pot)</li>
@@ -238,8 +244,10 @@ class BrewGuides extends Component {
                   <div className="brew-item-right-header brew-hide">
                     Kawiarka (Moka Pot) Brew Guide
                   </div>
-                  <div className="arrow" />
-                  <div className="brew-item-right-method">
+    <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  <div className="brew-item-right-method">
                     <ul>
                       <span>Instrukcja:</span>
                       <li>
@@ -315,8 +323,10 @@ class BrewGuides extends Component {
                         <span>Czas parzenia:</span> 2 minuty lub mniej
                       </li>
                     </ul>
-                    <div className="arrow" />
-                  </div>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  </div>
                   <ul>
                     <span> Wymagane przedmioty:</span>
                     <li>Aeropress</li>
@@ -335,8 +345,10 @@ class BrewGuides extends Component {
                   <div className="brew-item-right-header brew-hide">
                     Aeropress Brew Guide
                   </div>
-                  <div className="arrow" />
-                  <div className="brew-item-right-method">
+    <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  <div className="brew-item-right-method">
                     <ul>
                       <span>Instrukcja:</span>
                       <li>
@@ -407,8 +419,10 @@ class BrewGuides extends Component {
                         <span>Czas parzenia:</span> 6 minut, lub mniej
                       </li>
                     </ul>
-                    <div className="arrow" />
-                  </div>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  </div>
                   <ul>
                     <span> Wymagane przedmioty:</span>
                     <li>Chemex (6 filiżanek)</li>
@@ -425,8 +439,10 @@ class BrewGuides extends Component {
                   <div className="brew-item-right-header brew-hide">
                     Chemex Brew Guide{" "}
                   </div>
-                  <div className="arrow" />
-                  <div className="brew-item-right-method">
+    <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                  <div className="brew-item-right-method">
                     <ul>
                       <span>Instrukcja:</span>
                       <li>

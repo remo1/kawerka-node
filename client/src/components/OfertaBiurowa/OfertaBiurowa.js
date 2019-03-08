@@ -13,6 +13,7 @@ import { fetchHomepage } from "../../ducks/data";
 import Footer from "../global/Footer";
 
 require("./OfertaBiurowa.scss");
+let circle = require("../../assets/img/circle.svg");
 
 class OfertaBiurowa extends Component {
   componentDidMount() {
@@ -38,17 +39,26 @@ class OfertaBiurowa extends Component {
               <div className="oferta-biurowa-header">Oferta dla firm</div>
               <div className="dropdowns">
                 <div className="dropdowns-open">
-                  <div className="circle" />
+                  <div className="circle">
+                    <div className="circle-left">
+                      <img src={circle} alt="" />
+                    </div>
+                    <div className="circle-line" />
+                    <div className="circle-right">
+                      <img src={circle} alt="" />
+                    </div>
+                  </div>{" "}
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twoim biurze</span>
                     <span>
-            <img
-              alt=""
-              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
-              height="25px"
-              width="35px"
-            />
-          </span>                     </div>
+                      <img
+                        alt=""
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+                        height="25px"
+                        width="35px"
+                      />
+                    </span>{" "}
+                  </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
                       {" "}
@@ -64,7 +74,7 @@ class OfertaBiurowa extends Component {
                       aby otrzymać tester swieżo palonej kawy do Twojego biura.
                     </p>
                     <p>
-                      Jeżeli Twoje biuro nawiąże z nami współpracę, otrzymasz 
+                      Jeżeli Twoje biuro nawiąże z nami współpracę, otrzymasz
                       <strong> 10%</strong> wartości pierwszego zamówienia!
                     </p>
                     <a
@@ -79,17 +89,26 @@ class OfertaBiurowa extends Component {
                   </div>
                 </div>
                 <div className="dropdowns-open">
-                  <div className="circle" />
+                  <div className="circle">
+                    <div className="circle-left">
+                      <img src={circle} alt="" />
+                    </div>
+                    <div className="circle-line" />
+                    <div className="circle-right">
+                      <img src={circle} alt="" />
+                    </div>
+                  </div>{" "}
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twojej restauracji</span>
                     <span>
-            <img
-              alt=""
-              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
-              height="25px"
-              width="35px"
-            />
-          </span>                     </div>
+                      <img
+                        alt=""
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+                        height="25px"
+                        width="35px"
+                      />
+                    </span>{" "}
+                  </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
                       <strong>
@@ -107,9 +126,10 @@ class OfertaBiurowa extends Component {
                       <strong>ustawimy Twój ekspres do kawy </strong> pod nasze
                       ziarna!
                     </p>
-                     
+
                     <p>
-                      Skontaktuj się z nami, jeżeli chcesz dowiedzieć się więcej!
+                      Skontaktuj się z nami, jeżeli chcesz dowiedzieć się
+                      więcej!
                     </p>
                     <a
                       href="mailto:kontakt@kawerka.pl"
@@ -123,17 +143,26 @@ class OfertaBiurowa extends Component {
                   </div>
                 </div>
                 <div className="dropdowns-open">
-                  <div className="circle" />
+                  <div className="circle">
+                    <div className="circle-left">
+                      <img src={circle} alt="" />
+                    </div>
+                    <div className="circle-line" />
+                    <div className="circle-right">
+                      <img src={circle} alt="" />
+                    </div>
+                  </div>{" "}
                   <div onClick={e => showOnClick(e)} className="dropdowns-text">
                     <span>Kawa w Twojej kawiarni</span>
                     <span>
-            <img
-              alt=""
-              src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
-              height="25px"
-              width="35px"
-            />
-          </span>                     </div>
+                      <img
+                        alt=""
+                        src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.4.8/collection/icon/svg/ios-arrow-down.svg"
+                        height="25px"
+                        width="35px"
+                      />
+                    </span>{" "}
+                  </div>
                   <div className="dropdown dropdowns-hide">
                     <p>
                       Jesteś właścicielem kawiarni? Na pewno znasz i doceniasz
@@ -144,8 +173,8 @@ class OfertaBiurowa extends Component {
                       </strong>
                     </p>
                     <p>
-                      Każde ziarna w naszej ofercie mogą być wypalone w różnym stopniu.
-                      Napisz do nas, a{" "}
+                      Każde ziarna w naszej ofercie mogą być wypalone w różnym
+                      stopniu. Napisz do nas, a{" "}
                       <strong>
                         przygotujemy Twojej kawiarni specjalny profil kawy,
                       </strong>{" "}
@@ -165,7 +194,15 @@ class OfertaBiurowa extends Component {
                       Zadzwoń
                     </a>
                   </div>
-                  <div className="circle" />
+                  <div className="circle">
+                    <div className="circle-left">
+                      <img src={circle} alt="" />
+                    </div>
+                    <div className="circle-line" />
+                    <div className="circle-right">
+                      <img src={circle} alt="" />
+                    </div>
+                  </div>{" "}
                 </div>
               </div>
               <div className="info-siepomaga">

@@ -44,8 +44,10 @@ class Wysylka extends Component {
                 <div className="slider-copy">
                   <div className="header-text">wysyłka</div>
                   <div className="copy">
-                    <div className="arrow" />
-                    <p>
+      <div className="arrow">
+                    <div className="arrow-left" />
+                    <div className="arrow-right" />
+                  </div>                    <p>
                       {" "}
                       Zależy nam aby wszystkie paczki były dostarczone na czas i
                       w idealnym stanie. Dlatego wysyłamy tylko firmą kurierską

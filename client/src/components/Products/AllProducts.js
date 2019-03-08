@@ -5,6 +5,7 @@ import Loading from "../global/Loading";
 
 import ProductImage from "./ProductImage";
 require("./AllProducts.scss");
+let arrow = require("../../assets/img/arrow.svg");
 
 const AllProducts = props => {
   if (props.products !== undefined) {
@@ -19,7 +20,16 @@ const AllProducts = props => {
                   <ProductImage product={item} products={props.products} />
                   <div className="show-all-title">{item.name}</div>
                   <div className="show-all-taste">{item.smak}</div>
-                  <div className="arrow" />
+                  <div className="arrow">
+                    <div className="arrow-left">
+                      <img src={arrow} alt="" />
+                    </div>
+                    <div className="arrow-line" />
+
+                    <div className="arrow-right">
+                      <img src={arrow} alt="" />
+                    </div>
+                  </div>
                   <div className="show-all-info">{item.origin}</div>
                   <div className="show-all-price">
                     od {item.price[0].amount / 100}zł
