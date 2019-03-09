@@ -40,7 +40,7 @@
 
     &-title{
         color:$highlight;
-        font-family: 'core-header';
+        font-family: $core-header;
         .arrow{
             top:-12px;
         }
@@ -54,7 +54,7 @@
             font-size:14px;
             text-transform: capitalize;
             span{
-                font-family: 'core-header';
+                font-family: $core-header;
                 font-size:16px;
             }
         }

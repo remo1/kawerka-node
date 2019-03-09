@@ -27,7 +27,7 @@
                 padding-left: 8px;
 
                 span {
-                    font-family: 'core-header';
+                    font-family: $core-header;
                 }
             }
         }
@@ -44,7 +44,7 @@
         margin-top: 8px;
 
         span {
-            font-family: 'core-header';
+            font-family: $core-header;
             font-size: 24px;
             text-transform: uppercase;
             pointer-events: none;
@@ -69,7 +69,7 @@
 
         &-text {
             span {
-                font-family: 'core-header';
+                font-family: $core-header;
                 font-size: 16px;
                 text-transform: uppercase;
                 pointer-events: none;
@@ -83,7 +83,7 @@
 
         .dropdown {
             padding: 8px 24px;
-            font-size:14px;
+            font-size: 14px;
         }
     }
 }

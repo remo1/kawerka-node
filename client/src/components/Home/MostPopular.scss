@@ -4,7 +4,7 @@
 .most-popular{
     justify-items: center;
     text-align: center;
-    font-family: 'core-header';
+    font-family: $core-header;
     text-decoration: none;
     width:33%;
     padding:8px;
@@ -41,7 +41,7 @@
     }
     &-header{
         font-size: 24px;
-        font-family: 'hanley';
+        font-family: $hanley;
         padding-bottom:8px;
         color:$text;
     }

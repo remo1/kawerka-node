@@ -36,7 +36,7 @@
         width: 100%;
         display: inline-block;
         text-transform: uppercase;
-        font-family: 'core-cta';
+        font-family: $core-cta;
         padding: 24px 0;
         border-bottom: 2px solid $text;
     }
@@ -47,7 +47,7 @@
         border-bottom: 2px solid $text;
 
         &-name {
-            font-family: 'core-header';
+            font-family: $core-header;
             color: $highlight;
             margin-bottom: 8px;
         }
@@ -58,7 +58,7 @@
 
             span {
                 font-size: 16px;
-                font-family: 'core-header';
+                font-family: $core-header;
                 text-transform: capitalize;
             }
 
@@ -76,7 +76,7 @@
 
         span {
             font-size: 16px;
-            font-family: 'core-header';
+            font-family: $core-header;
             align-self: center;
 
         }
@@ -96,7 +96,7 @@
         border-bottom: 0;
 
         p {
-            font-family: 'hanley';
+            font-family: $hanley;
             text-align: center;
             font-size: 24px;
             margin: 0;

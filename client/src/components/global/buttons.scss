@@ -8,7 +8,7 @@
     color: $highlight;
     text-decoration: none;
     z-index: 999;
-    font-family: 'core-cta';
+    font-family: $core-cta;
     transition: .1s;
 
     &:hover {

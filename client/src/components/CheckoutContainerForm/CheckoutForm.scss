@@ -18,7 +18,7 @@
     .reg {
         a {
             color: $highlight;
-            font-family: 'core-header';
+            font-family: $core-header;
         }
 
 
@@ -60,7 +60,7 @@
             margin-top: 4px;
             padding: 4px;
             text-align: center;
-            font-family: 'hanley';
+            font-family: $hanley;
             font-weight: normal;
             margin-bottom: 0;
             position: relative;
@@ -209,7 +209,7 @@
             align-items: center;
             justify-content: center;
             font-size: 24px;
-            font-family: 'core-cta';
+            font-family: $core-cta;
             position: relative;
             left: -26px;
             top: -1px;

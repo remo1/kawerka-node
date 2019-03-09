@@ -19,15 +19,15 @@ const ProductTitle = props => {
             {props.item.name}
           </div>
           <div className="arrow">
-                    <div className="arrow-left">
-                      <img src={arrow} alt="" />
-                    </div>
-                    <div className="arrow-line" />
+            <div className="arrow-left">
+              <img src={arrow} alt="" />
+            </div>
+            <div className="arrow-line" />
 
-                    <div className="arrow-right">
-                      <img src={arrow} alt="" />
-                    </div>
-                  </div>
+            <div className="arrow-right">
+              <img src={arrow} alt="" />
+            </div>
+          </div>
           <div className="single-product-description-taste">
             <div className="single-product-description-taste-taste">
               {" "}

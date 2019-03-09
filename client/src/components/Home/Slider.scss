@@ -27,7 +27,6 @@
         padding: 0;
 
         .slick-active {
-            zoom: 1;
             opacity: 1;
             transition: $trans;
 
@@ -36,18 +35,18 @@
 
         li {
             margin: 0 4px;
-            zoom: .7;
             opacity: 0.6;
             transition: $trans;
             color: transparent;
+
             button {
                 background: $text;
                 color: transparent;
                 transition: $trans;
                 border-radius: 100%;
                 border: 0;
-                height:18px;
-                width:18px;
+                height: 18px;
+                width: 18px;
             }
         }
     }
@@ -135,7 +134,7 @@
 
         // .header-text {
         //     font-size: 128px;
-        //     font-family: 'hanley';
+        //     font-family: $hanley;
         //     width: 100%;
         //     color: $text;
         //     text-align: center;
@@ -166,7 +165,7 @@
 @include respond-above(lg) {
     .header-text {
         font-size: 132px;
-        font-family: 'hanley';
+        font-family: $hanley;
         width: 100%;
         color: $text;
         text-align: center;
@@ -182,7 +181,7 @@
 @include respond-between(md, lg) {
     .header-text {
         font-size: 128px;
-        font-family: 'hanley';
+        font-family: $hanley;
         width: 100%;
         color: $text;
         text-align: center;
@@ -218,7 +217,7 @@
 
             .header-text {
                 font-size: 64px;
-                font-family: 'hanley';
+                font-family: $hanley;
                 width: 100%;
                 color: $text;
                 text-align: center;
@@ -270,7 +269,7 @@
 
             .header-text {
                 font-size: 38px;
-                font-family: 'hanley';
+                font-family: $hanley;
                 width: 100%;
                 color: $text;
                 text-align: center;

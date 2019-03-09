@@ -3,18 +3,21 @@
 
 .brew {
     padding: 0 8px;
-    &-hide{
-        display:block;
+
+    &-hide {
+        display: block;
     }
-    &-show{
-        display:none;
+
+    &-show {
+        display: none;
     }
+
     &-header {
         font-size: 36px;
         text-transform: lowercase;
-        font-family: 'hanley';
+        font-family: $hanley;
         text-align: center;
-        color:$text;
+        color: $text;
 
     }
 
@@ -22,6 +25,7 @@
         display: flex;
         flex-direction: row;
         margin: 32px 0;
+
         span {
             pointer-events: none;
         }
@@ -29,6 +33,7 @@
         img {
             pointer-events: none;
         }
+
         &-item {
             width: 25%;
             display: flex;
@@ -66,7 +71,7 @@
                 content: url('../../assets/img/arrow.svg');
                 position: absolute;
                 top: 0;
-                right: -20px;
+                right: -19px;
                 // transform: scale(-1, 1);
                 transform: rotate(90deg)
             }
@@ -75,11 +80,11 @@
                 content: url('../../assets/img/arrow.svg');
                 position: absolute;
                 bottom: 0;
-                right: -20px;
+                right: -21px;
                 // transform: scale(-1, 1);
                 transform: rotate(-90deg)
             }
-          
+
 
             img {
                 width: 70%;
@@ -90,7 +95,7 @@
             }
 
             span {
-                font-family: 'core-header';
+                font-family: $core-header;
                 text-decoration: none;
                 color: $text;
                 //     text-transform: lowercase;
@@ -167,8 +172,8 @@
                     }
 
                     span {
-                        font-family: 'core-cta';
-                        text-transform: uppercase;
+                        font-family: $core-cta;
+                         text-transform: uppercase;
                         font-size: 16px;
                     }
                 }
@@ -176,7 +181,7 @@
 
             ul {
                 list-style: none;
-                padding:0;
+                padding: 0;
 
                 li {
                     margin: 8px 0;
@@ -185,12 +190,12 @@
                         color: $highlight;
                         font-size: 18px;
                         text-decoration: none;
-                        font-family: 'core-header';
+                        font-family: $core-header;
                     }
                 }
 
                 span {
-                    font-family: 'core-cta';
+                    font-family: $core-cta;
                     text-transform: uppercase;
                     font-size: 18px;
                 }
@@ -204,7 +209,7 @@
 
             &-header {
                 font-size: 42px;
-                font-family: 'hanley';
+                font-family: $hanley;
                 text-transform: lowercase;
                 text-align: center;
                 padding: 8px 0;
@@ -233,7 +238,7 @@
                         content: counter(li);
                         color: $button-hover;
                         display: inline-block;
-                        font-family: 'core-cta';
+                        font-family: $core-cta;
                         width: 10px;
                         height: 10px;
                         position: absolute;
@@ -244,7 +249,7 @@
                 span {
                     text-transform: uppercase;
                     font-size: 18px;
-                    font-family: 'core-cta';
+                    font-family: $core-cta;
                     margin-bottom: 18px;
                 }
             }
@@ -254,26 +259,29 @@
 }
 
 @include respond-between(xxs, xs) {
-    .brew{
-        &-hide{
-            display:none;
+    .brew {
+        &-hide {
+            display: none;
         }
-        &-show{
-            display:block;
+
+        &-show {
+            display: block;
         }
     }
+
     .brew-methods {
         flex-wrap: wrap;
-     
+
         &-item {
             width: 50%;
             margin: 12px 0;
             border: 0;
             justify-content: center;
             align-content: center;
+
             img {
                 max-height: 100px;
-                width:auto;
+                width: auto;
 
             }
 

@@ -25,7 +25,7 @@
             -moz-appearance: none;
             border-radius: 0 !important;
             padding: 0 8px;
-            font-family: 'core-header';
+            font-family: $core-header;
             border: 2px solid $text;
             margin-top: 4px;
             display: block;
@@ -35,7 +35,6 @@
             background-color: white;
             background-size: 25px;
             background-position: 98% ;
-
         }
     }
 
@@ -148,7 +147,7 @@
             width: 100%;
             text-align: center;
             display: inline-block;
-            font-family: 'hanley';
+            font-family: $hanley;
 
         }
 

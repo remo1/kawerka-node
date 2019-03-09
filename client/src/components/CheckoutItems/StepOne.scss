@@ -59,7 +59,7 @@
             .step-circle {
                 background-color: $highlight !important;
                 color: white;
-                font-family: 'core-cta';
+                font-family: $core-cta;
                 // &:before {
                 //     background-color: $highlight;
                 // }
@@ -70,21 +70,21 @@
             .step-circle {
                 background-color: $highlight !important;
                 color: white;
-                font-family: 'core-cta';
+                font-family: $core-cta;
                 // &:before {
                 //     background-color: $highlight;
                 // }
             }
 
             .step-info {
-                font-family: 'core-cta';
+                font-family: $core-cta;
             }
         }
 
         .step-circle {
             background-color: $highlight !important;
             color: white;
-            font-family: 'core-cta';
+            font-family: $core-cta;
 
             &:before {
                 background-color: $highlight;
@@ -92,7 +92,7 @@
         }
 
         .step-info {
-            font-family: 'core-cta';
+            font-family: $core-cta;
         }
     }
 
