@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+let arrow = require("../../assets/img/arrow.svg");
 
 require("./Biuro.scss");
 
@@ -24,11 +25,21 @@ class Biuro extends Component {
           </div>
           <div className="slider-copy">
             <div className="header-text">oferta dla firm</div>
-            <div className="arrow" />
+            <div className="arrow">
+              <div className="arrow-left">
+                <img src={arrow} alt="" />
+              </div>
+              <div className="arrow-line" />
+
+              <div className="arrow-right">
+                <img src={arrow} alt="" />
+              </div>
+            </div>
 
             <div className="copy">
               <p>
-                Nie smakuje Ci kawa w Twoim biurze? Zaproponuj Kawerkę i otrzymaj <strong>10%</strong> wartości pierwszego zamówienia.
+                Nie smakuje Ci kawa w Twoim biurze? Zaproponuj Kawerkę i
+                otrzymaj <strong>10%</strong> wartości pierwszego zamówienia.
               </p>
               <a href="/oferta-dla-firm" className="button button-red">
                 ZOBACZ WIĘCEJ!
