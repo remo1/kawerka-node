@@ -17,6 +17,8 @@ class CheckoutContainer extends Component {
   componentDidMount() {
     this.props.GetProducts();
     this.props.GetCartItems();
+    window.scrollTo({ top: 0});
+
   }
 
   render() {

@@ -21,7 +21,6 @@ class HeaderNav extends Component {
     if (!this.props.cart.fetched) {
       this.props.GetCartItems();
     }
-    window.scrollTo({ top: 0});
   }
   cartItems() {
     if (this.props.cart.fetched) {

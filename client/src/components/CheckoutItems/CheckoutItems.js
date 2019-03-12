@@ -91,7 +91,7 @@ class CheckoutItems extends Component {
               </div>
             </div>
           </div>
-          <Link className="button button-red" to="/checkout-form"> przejdź dalej </Link>
+          <a className="button button-red" href="/checkout-form"> przejdź dalej </a>
 
         </div>
       );
