@@ -125,7 +125,8 @@ class CheckoutForm extends Component {
       grind.push(item.id);
     });
 
-    CheckoutTemplate.total_cost = this.props.cart.meta.display_price.with_tax.amount;
+
+    CheckoutTemplate.total_cost = this.props.cart.meta.display_price.with_tax.amount > 9900 ? this.props.cart.meta.display_price.with_tax.amount : this.props.cart.meta.display_price.with_tax.amount + 1500;
 
     CheckoutTemplate.customer.name = values.name;
     CheckoutTemplate.customer.email = values.email;
@@ -160,9 +161,7 @@ class CheckoutForm extends Component {
     } else {
       CheckoutTemplate.billing_address = CheckoutTemplate.shipping_address;
     }
-
-    console.log(CheckoutTemplate);
-
+    
     axios.post("/api/checkout", CheckoutTemplate).then(res => {
       this.props.dispatch(dispatch => {
         dispatch({ type: SEND_TO_PAYU, payload: res.data });
@@ -526,11 +525,11 @@ class CheckoutForm extends Component {
               <a href="/regulamin">regulamin.</a>
             </p>
             <button
-              disabled={
-                this.props.invalid ||
-                this.props.submitting ||
-                this.props.pristine
-              }
+              // disabled={
+              //   this.props.invalid ||
+              //   this.props.submitting ||
+              //   this.props.pristine
+              // }
               className="submit button button-red"
               type="submit"
             >

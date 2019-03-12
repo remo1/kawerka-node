@@ -3,6 +3,14 @@ var router = express.Router();
 var axios = require("axios");
 
 router.post("/api/checkout", function(req, res, next) {
+  let price;
+
+  if (req.body.total_cost > 99) {
+    price = req.body.total_cost;
+  } else {
+    price = req.body.total_cost + 1500;
+
+  }
   // console.log(req.body);
 
   let bodyPay = {
@@ -12,7 +20,7 @@ router.post("/api/checkout", function(req, res, next) {
     merchantPosId: "893466",
     description: "Kawerka Order",
     currencyCode: "PLN",
-    totalAmount: req.body.total_cost,
+    totalAmount: price,
     buyer: {
       email: req.body.customer.email,
       phone: req.body.billing_address.telephone,
@@ -77,16 +85,16 @@ router.post("/api/checkout", function(req, res, next) {
       maxRedirects: 0,
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer " + token
+        Authorization: "Bearer " + token
       },
       data: bodyPay
     })
-      .then(resp => {  
+      .then(resp => {
         let json = JSON.parse(resp);
-        res.json('asd');
+        res.json("asd");
       })
       .catch(e => {
-        res.json(e.response.data)
+        res.json(e.response.data);
       });
   };
 
