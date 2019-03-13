@@ -43,7 +43,7 @@ const InfoDropdowns = props => {
               <span>Wysokość uprawy:</span> {props.item.selected_item.a3}
             </li>
             <li>
-              <span>Metoda suszenia:</span> {props.item.selected_item.a4}
+              <span>Metoda obróbki:</span> {props.item.selected_item.a4}
             </li>
           </ul>
         </div>
